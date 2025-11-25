@@ -1,0 +1,138 @@
+extends ../main
+
+block variables
+    - var title = 'Сравнение'
+    - var main = false
+
+block content
+    main.compare
+        //- main
+        section.compare__main
+            form.basket__form
+                .container
+                    //- bread
+                    .compare__bread.bread
+                        a(href='/').bread__link
+                            +icon('home','bread__link-svg')
+                        span.bread__link.active
+                            span.bread__link-txt Сравнение
+
+                    //- title
+                    h1.title.compare__title Сравнение
+                    //- head
+                    .compare__head
+                        .compare__th
+                            +icon('compare','compare__th-svg compare__th-svg_compare')
+                            .compare__th-txt
+                                b Сравнение товаров
+                        .compare__th
+                            .compare__th-txt
+                                |В сравнении:&nbsp;
+                                b 4 товара
+                        .compare__th
+                            a(href='/').compare__reset
+                                +icon('close','compare__th-svg compare__th-svg_close')
+                                .compare__th-txt Очистить
+
+
+                    //- slider
+                    div(data-speed='500'  data-pagination='true').compare__slider
+                        button(type='button' class='compare__prev').arrow.compare__prev
+                            +icon('prev','arrow__svg')
+                        .swiper-container.compare__container
+                            .swiper-wrapper
+                                each i in irecomItems
+                                    .swiper-slide.compare__item
+                                        +itemCompare(i)
+                        button(type='button' class='compare__next').arrow.compare__next
+                            +icon('next','arrow__svg')
+                    //- pag
+                    .compare__pag
+                        .pag
+                    //- slider2
+                    div(data-speed='500').compare__slider2
+                        .swiper-container.compare__container2
+                            .swiper-wrapper
+                                each i in [1,2,3,4]
+                                    .swiper-slide.compare__item2
+                                        .cchars
+                                            div(data-row='1').cchar
+                                                .cchar__title Категория товара
+                                                .cchar__val Шуруповёрты
+                                            div(data-row='2').cchar
+                                                .cchar__title Цвет
+                                                .cchar__val Черный
+                                            div(data-row='3').cchar
+                                                .cchar__title Резьба
+                                                .cchar__val Зубр
+                                            div(data-row='4').cchar
+                                                .cchar__title Модель рукоятки
+                                                .cchar__val Нет
+                                            div(data-row='5').cchar
+                                                .cchar__title Ширина патрона
+                                                .cchar__val 57 мм
+                                            div(data-row='6').cchar
+                                                .cchar__title Возможность перезарядки
+                                                .cchar__val Есть
+                                            div(data-row='7').cchar
+                                                .cchar__title Возможность замены аккумулятора
+                                                .cchar__val Есть
+                                            div(data-row='8').cchar
+                                                .cchar__title USB
+                                                .cchar__val Да
+                                            div(data-row='9').cchar
+                                                .cchar__title Подерживаемые устройства
+                                                .cchar__val Bosh, Kolner
+                                .swiper-slide.compare__item2
+                                    .cchars
+                                        div(data-row='1').cchar
+                                            .cchar__title Категория товара
+                                            .cchar__val Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur, atque blanditiis distinctio impedit incidunt maiores odio quidem sapiente similique.
+                                        div(data-row='2').cchar
+                                            .cchar__title Цвет
+                                            .cchar__val Черный
+                                        div(data-row='3').cchar
+                                            .cchar__title Резьба
+                                            .cchar__val Зубр
+                                        div(data-row='4').cchar
+                                            .cchar__title Модель рукоятки
+                                            .cchar__val Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ducimus laboriosam nemo optio quae qui rem sed vero? Libero, repellendus sequi. Atque corporis debitis laudantium maxime officia perspiciatis! Dolorem, minima?
+                                        div(data-row='5').cchar
+                                            .cchar__title Ширина патрона
+                                            .cchar__val 57 мм
+                                        div(data-row='6').cchar
+                                            .cchar__title Возможность перезарядки
+                                            .cchar__val Есть
+                                        div(data-row='7').cchar
+                                            .cchar__title Возможность замены аккумулятора
+                                            .cchar__val Есть
+                                        div(data-row='8').cchar
+                                            .cchar__title USB
+                                            .cchar__val Да
+                                        div(data-row='9').cchar
+                                            .cchar__title Подерживаемые устройства
+                                            .cchar__val Bosh, Kolner
+        //- recom
+        section.compare__recom
+            .brecom
+                .container
+                    //- top
+                    +title('Рекомендуем','ВСЯ ПРОДУКЦИЯ','catalog.html','brecom')
+
+                    //- slider
+                    div(data-speed='500'  data-pagination='true').brecom__slider
+                        button(type='button' class='brecom__prev').arrow.brecom__prev
+                            +icon('prev','arrow__svg')
+                        .swiper-container.brecom__container
+                            .swiper-wrapper
+                                each i in irecomItems
+                                    .swiper-slide.brecom__item
+                                        +item(i)
+                        button(type='button' class='brecom__next').arrow.brecom__next
+                            +icon('next','arrow__svg')
+                    //- pag
+                    div(class='brecom__pag').brecom__pag
+                        .pag
+
+
+

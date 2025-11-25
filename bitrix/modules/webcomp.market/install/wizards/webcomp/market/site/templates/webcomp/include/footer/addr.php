@@ -1,0 +1,1 @@
+<a class="footer__contact" href="https://yandex.ru/maps/?text=<?= urlencode('#ADDRESS#')?>">#ADDRESS#</a>

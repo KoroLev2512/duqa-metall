@@ -1,0 +1,415 @@
+.orders {
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    margin-bottom: 45px;
+    @include sm-block {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+  &__back {
+    width: 217px;
+    height: 39px;
+    border-radius: 2px;
+    background: $main1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tr;
+
+    &:hover {
+      background-color: $main2;
+    }
+
+    &-svg {
+      width: 24px;
+      height: 8px;
+      fill: $bg;
+      margin-right: 10px;
+    }
+
+    &-txt {
+      color: $bg;
+      font-size: 14px;
+    }
+  }
+
+}
+
+.order {
+  border-bottom: 1px solid $border;
+
+  &:first-child {
+    border-top: 1px solid $border;
+  }
+
+  &.active {
+    .order {
+      &__top {
+        &:after {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 25px 0;
+    padding-right: 50px;
+    cursor: pointer;
+    @include md-block {
+      padding: 15px 20px;
+      padding-left: 20px;
+      padding-right: 30px;
+    }
+    @include sm-block {
+      padding: 20px 10px;
+      padding-right: 30px;
+      flex-direction: column;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -2px;
+      right: 15px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 3px 0 3px;
+      border-color: $headers transparent transparent transparent;
+      @include tr;
+      @include sm-block {
+        top: 25px;
+      }
+    }
+
+  }
+
+  &__num, &__sum, &__status {
+    color: $headers;
+    font-size: 18px;
+    font-weight: 300;
+
+    b {
+      font-weight: 700;
+    }
+
+    @include sm-block {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__num {
+    margin-right: 40px;
+  }
+
+  &__status {
+    margin-left: auto;
+    @include md-block {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 15px;
+    }
+    @include sm-block {
+      margin-top: 0;
+    }
+
+    &_b {
+      color: $main3;
+      font-weight: 700;
+    }
+
+    &_or {
+      color: $main1;
+      font-weight: 700;
+    }
+
+    &_l {
+      color: $text2;
+    }
+  }
+
+  &__bottom {
+    display: none;
+    background: $bg2;
+    padding: 50px 40px;
+    @include sm-block {
+      border-top: 1px solid $border;
+      padding: 20px 10px;
+    }
+  }
+
+  &__date {
+    color: $headers;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    @include sm-block {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &__items {
+    margin-bottom: 30px;
+    @include sm-block {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include sm-block {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__delivery {
+    margin-bottom: 30px;
+
+    &-title {
+      color: $headers;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      @include sm-block {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__total {
+    margin-bottom: 30px;
+    @include sm-block {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 35px;
+  }
+
+  &__client {
+    &-title {
+      color: $headers;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      @include sm-block {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+
+.oitem {
+  display: flex;
+  align-items: flex-end;
+
+
+  &__title {
+    flex-grow: 1;
+    position: relative;
+    color: $text2;
+    font-size: 14px;
+    line-height: lh(14, 20);
+    @include tr;
+
+    @include sm-block {
+      font-size: 12px;
+      padding-right: 60px;
+    }
+
+    &_b {
+      color: $headers;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &-txt {
+      position: relative;
+      z-index: 2;
+      background: $bg2;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: url("../images/icons/line.png") 0 0;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__price {
+    color: $black;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    @include tr;
+
+    &_b {
+      color: $main3;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &__oldprice {
+    color: $text2;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+
+}
+
+a.oitem {
+  &:hover {
+    .oitem {
+      &__title {
+        color: $main1;
+      }
+
+      &__price {
+        color: $main1;
+      }
+    }
+  }
+}
+
+.oinfo {
+  &__item {
+    display: flex;
+    align-items: center;
+    @include sm-block {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-svg {
+      fill: $main1;
+
+      &_car {
+        width: 32px;
+        height: 32px;
+      }
+
+      &_wallet {
+        width: 23px;
+        height: 19px;
+      }
+
+    }
+  }
+
+  &__txt {
+    color: $text2;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: lh(12, 20);
+  }
+
+
+}
+
+.oclient {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  &__item {
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    @include sm-block {
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    fill: $main1;
+
+    &_cabinet {
+      width: 18px;
+      height: 18px;
+    }
+
+    &_tel2 {
+      width: 18px;
+      height: 18px;
+    }
+
+    &_pin {
+      width: 14px;
+      height: 18px;
+    }
+
+    &_pin2 {
+      width: 15px;
+      height: 21px;
+    }
+
+  }
+
+  &__txt {
+    color: $text2;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: lh(14, 20);
+  }
+
+}

@@ -1,0 +1,30 @@
+extends ../main
+
+block variables
+    - var title = '404'
+    - var main = false
+
+block content
+    main.notfound
+        .container
+            //- bread
+            .notfound__bread.bread
+                a(href='/').bread__link
+                    +icon('home','bread__link-svg')
+                span.bread__link.active
+                    span.bread__link-txt 404
+            .notfound__main
+                .notfound__title
+                    |Ошибка 404
+                    br
+                    |Страница не найдена
+                +image('/images/content/404/404.svg', 'notfound__img')
+                .notfound__sub
+                    |Неправильно набран адрес или такой
+                    br
+                    |страницы не существует
+                a(href='/').notfound__back.btn ПЕРЕЙТИ НА ГЛАВНУЮ
+
+
+
+

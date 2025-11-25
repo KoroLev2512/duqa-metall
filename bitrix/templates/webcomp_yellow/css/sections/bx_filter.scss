@@ -1,0 +1,282 @@
+.bx_filter {
+  border: 1px solid $icon;
+}
+
+.bx_filter .bx_filter_title {
+  background-color: $main1;
+  padding: 17px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  color: $bg;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.bx_filter .bx_filter_parameters_box {
+  padding: 10px 20px;
+  border-bottom: 1px solid $border;
+}
+
+.bx_filter .bx_filter_parameters_box_title {
+  display: block;
+  font-weight: 700;
+  padding: 10px 0;
+  padding-right: 15px;
+  position: relative;
+  font-size: 13px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: left;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  color: $black;
+}
+
+.bx_filter .bx_filter_parameters_box_title:hover {
+  color: $main1;
+}
+
+.bx_filter .bx_filter_parameters_box.active .bx_filter_block i {
+  font-size: 15px;
+  font-style: normal;
+  color: $text2;
+  display: block;
+  padding-bottom: 3px;
+}
+
+.bx_filter .bx_filter_parameters_box_container_block {
+  font-size: 11px;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  color: $footer;
+}
+
+.bx_filter .bx_filter_parameters_box_container .bx_filter_input_container input {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 33px;
+  margin: 0;
+
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid $icon;
+  background-color: $bg;
+  padding: 10px 10px;
+  font-size: 13px;
+  font-weight: 400;
+  color: $text2;
+}
+
+.bx_filter .bx_ui_slider_part span {
+  font-size: 11px;
+  font-weight: bold;
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  display: block;
+  width: 100px;
+  margin-left: -50px;
+  text-align: center;
+  color: $black;
+}
+
+.bx_filter .bx_ui_slider_pricebar_V {
+  z-index: 80;
+  top: -1px;
+  bottom: -1px;
+  background: $main1;
+}
+
+.bx_filter .bx_filter_select_block {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 33px;
+  margin: 0;
+  padding: 0 33px 0 10px;
+  border: none;
+  border-radius: 2px;
+  background: $bg;
+  box-shadow: inset 0 3px 6px 0 rgba($icon, .75);
+}
+
+.bx_filter_select_popup ul li:first-child {
+  border-bottom: 1px solid $border2;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.bx_filter_select_popup ul li label {
+  font-size: 14px;
+  line-height: 26px;
+  display: block;
+  text-align: left !important;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 26px;
+  padding: 0 5px;
+  cursor: pointer;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  color: $text;
+}
+
+.bx_filter_select_popup ul li label:hover {
+  color: $black;
+  background: $bg2;
+}
+
+.bx_filter_select_popup ul li label.disabled {
+  color: $border2;
+  background: transparent;
+}
+
+.bx_filter .bx_filter_param_label.disabled .bx_filter_param_text {
+  color: $text;
+  /*text-decoration: line-through;*/
+}
+
+.bx_filter_select_popup .bx_filter_param_label.active {
+  background: $bg2;
+}
+
+.bx_filter .bx_filter_input_checkbox input[type=checkbox]:checked {
+  background: $main1;
+}
+
+.bx_filter .bx_filter_param_btn {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  text-decoration: none;
+  color: $black;
+  vertical-align: middle;
+  border: 2px solid $icon;
+  background: $bg2;
+  background-clip: padding-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(255, 255, 255, .22);
+  text-shadow: 0 1px 0 $bg;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfdfd', endColorstr='#cfe1e7', GradientType=0);
+  -webkit-transition: border .3s ease, box-shadow .1s ease, color .3s ease;
+  -moz-transition: border .3s ease, box-shadow .1s ease, color .3s ease;
+  -ms-transition: border .3s ease, box-shadow .1s ease, color .3s ease;
+  -o-transition: border .3s ease, box-shadow .1s ease, color .3s ease;
+  transition: border .3s ease, box-shadow .1s ease, color .3s ease;
+  cursor: pointer;
+}
+
+.bx_filter .bx_filter_param_label.active .bx_filter_param_btn {
+  border-color: $main1;
+  background: $bg2;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZmUyZTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #feffff), color-stop(100%, #cfe2e7));
+  background: -webkit-linear-gradient(top, #fcfefe 0%, #feffff 100%);
+  background: -moz-linear-gradient(top, #fcfefe 0%, #feffff 100%);
+  background: -ms-linear-gradient(top, #fcfefe 0%, #feffff 100%);
+  background: -o-linear-gradient(top, #fcfefe 0%, #feffff 100%);
+  background: linear-gradient(top bottom, #fcfefe 0%, #cfe2e7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfefe', endColorstr='#feffff', GradientType=0);
+  /*box-shadow:0 0 0 3px #2995d7,inset 0 2px 3px rgba(0,0,0,.12);*/
+}
+
+.bx_filter span.bx_spm{
+  font-size:18px;
+  font-weight:bold;
+  line-height:23px;
+  display:inline-block;
+  height:23px;
+  margin:0 10px;
+  vertical-align:middle;
+  color:$black;
+}
+
+.bx_filter_btn_color_icon.all:before{
+  position: absolute;
+  width: 60%;
+  height:60%;
+  background: $bg;
+  content: " ";
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
+}
+
+.bx_filter .bx_filter_parameter_biz.active{
+  position:relative;
+  padding-left:20px;
+  color:$validation;
+  border-bottom:1px solid;
+}
+
+.bx_filter .bx_filter_search_button{
+  cursor: pointer;
+  background-color: $main1;
+  color: $bg;
+  margin-bottom: 20px;
+  font-size: 14px;
+  width: 177px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.42;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 10px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.bx_filter .bx_filter_search_reset{
+  color: $text2;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.bx_filter .bx_filter_search_reset:hover{
+  color:$footer;
+}
+
+.bx_filter .bx_filter_popup_result{
+  font-size:13px;
+  font-weight:normal;
+  line-height:33px;
+  position:absolute;
+  z-index:930;
+  display:none;
+  height:33px;
+  margin-top:-7px;
+  margin-left:10px;
+  padding:0 10px;
+  white-space:nowrap;
+  color:$footer;
+  border-top:1px solid $border;
+  border-right:1px solid $border;
+  border-bottom:1px solid $border;
+  border-left:1px solid $border;
+  border-radius:3px;
+  background:$bg;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
+}
+

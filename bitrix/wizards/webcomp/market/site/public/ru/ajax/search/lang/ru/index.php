@@ -1,0 +1,4 @@
+<?
+$MESS["SEARCH_SECTIONS_TITLE"] = "Разделы";
+$MESS["SEARCH_PRODUCTS_TITLE"] = "Товары";
+$MESS["SEARCH_SERVICES_TITLE"] = "Услуги";

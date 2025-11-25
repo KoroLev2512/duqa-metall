@@ -1,0 +1,173 @@
+extends ../main
+
+block variables
+    - var title = 'Спасибо за заказ!'
+    - var main = false
+
+block content
+    main.ok
+        //- main
+        section.ok__main
+            .container
+                .row
+                    //- left
+                    .ok__left
+                        //- block
+                        // .ok__block
+                        //     .bblock
+                        //         .bblock__title
+                        //             +icon('cabinet','bblock__title-svg')
+                        //             .bblock__title-txt Личный кабинет
+                        //         .bblock__content
+                        //             .bblock__info
+                        //                 .bblock__info-left
+                        //                     +image('images/icons/info.svg','bblock__info-img')
+                        //                 .bblock__info-right
+                        //                     .bblock__info-txt Зарегистрируйтесь на сайте, чтобы получить доступ в личный кабинет и вести архив и отслеживать статус заказов
+                        //                     .bblock__info-links
+                        //                         a(href='registration.html').bblock__info-link Зарегистрироваться
+                        //                         a(href='enter.html').bblock__info-link
+                        //                             +icon('cabinet','bblock__info-svg')
+                        //                             | Войти
+
+
+                        //- consult
+                        .ok__consult.catalog__consult
+                            .catalog__consult-top
+                                .catalog__consult-image
+                                    +image('images/content/catalog/img.svg','catalog__consult-img')
+                                .catalog__consult-title Нужна консультация?
+                                .catalog__consult-txt Наши специалисты ответят на любой интересующий вопрос
+                            button(type='button').catalog__consult-btn.jsQuestion ЗАДАТЬ ВОПРОС
+
+
+                    //- middle
+                    .ok__middle
+                        //- bread
+                        .ok__bread.bread
+                            a(href='/').bread__link
+                                +icon('home','bread__link-svg')
+                            span.bread__link.active
+                                span.bread__link-txt Заказ оформлен
+
+                        //- title
+                        h1.title.ok__title Спасибо за заказ!
+
+                        //- sub
+                        .ok__sub Мы свяжемся с вами в ближайшее время для уточнения деталей оплаты и доставки.
+
+                        //- order
+                        .ok__num
+                            .oknum
+                                .oknum__left
+                                    +icon('chech-round','oknum__svg')
+                                .oknum__right
+                                    .oknum__item
+                                        | Номер вашего заказа:&nbsp;
+                                        b 131805
+                                    .oknum__item
+                                        | Сумма:&nbsp;
+                                        b 14 500 руб.
+
+
+
+                        //- info
+                        .ok__info
+                            .okinfo
+                                .okinfo__title Иформация о заказе:
+                                .okinfo__list
+                                    .okinfo__item
+                                        .okinfo__item-wrap
+                                            .okinfo__item-txt
+                                                .okinfo__item-text Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671
+                                            .okinfo__item-prices
+                                                .okinfo__item-oldprice 10 000 руб.
+                                                .okinfo__item-price 7 000 руб.
+                                    .okinfo__item
+                                        .okinfo__item-wrap
+                                            .okinfo__item-txt
+                                                .okinfo__item-text Kolner - дрель с набором носадок
+                                            .okinfo__item-prices
+                                                .okinfo__item-price 7 000 руб.
+                                    .okinfo__item.okinfo__item_delivery
+                                        .okinfo__item-title Доставка:
+                                        .okinfo__item-wrap
+                                            .okinfo__item-txt
+                                                .okinfo__item-text В пределах мкад
+                                            .okinfo__item-prices
+                                                .okinfo__item-price 500 руб.
+
+
+                                .okinfo__details
+                                    .okinfo__detail
+                                        .okinfo__detail-img
+                                            +image('images/icons/car2.svg','okinfo__detail-pic')
+                                        .okinfo__detail-txt Тверская улица, дом 13, квартира 23. Ближайшая станция метро: Краснопресненская. 4 подъезд, 5 этаж. Код домофона: #5455
+                                    .okinfo__detail
+                                        .okinfo__detail-img
+                                            +image('images/icons/wallet.svg','okinfo__detail-pic')
+                                        .okinfo__detail-txt Оплата при получении заказа, наличными.
+
+
+                        .ok__btn
+                            //- back
+                            a(href='/').ok__back
+                                +icon('arrow-s-left','ok__back-svg')
+                                span.ok__back-txt Вернуться к покупкам
+
+
+                    //- right
+                    .ok__right
+                        .ok__client
+                            .okclient
+                                .okclient__title Информация о клиенте:
+                                .okclient__list
+                                    .okclient__item
+                                        | Алексей Иванов
+                                        br
+                                        | +7 900 000 00 00
+                                        br
+                                        | alex@gmail.com
+                                    .okclient__item
+                                        | Тверская улица, дом 13, квартира 23.
+                                        br
+                                        |Ближайшая станция метро:
+                                        br
+                                        |Краснопресненская. 4 подъезд, 5
+                                        br
+                                        |этаж. Код домофона: #5455
+
+
+                                .okclient__btn
+                                    //- back
+                                    a(href='/').ok__back
+                                        +icon('arrow-s-left','ok__back-svg')
+                                        span.ok__back-txt Вернуться к покупкам
+        //- actions
+        section.ok__actions
+            +iactions('iactions_basket')
+
+        //- recom
+        section.ok__recom
+            .brecom
+                .container
+                    //- top
+                    +title('Рекомендуем','ВСЯ ПРОДУКЦИЯ','catalog.html','brecom')
+
+                    //- slider
+                    div(data-speed='500'  data-pagination='true').brecom__slider
+                        button(type='button' class='brecom__prev').arrow.brecom__prev
+                            +icon('prev','arrow__svg')
+                        .swiper-container.brecom__container
+                            .swiper-wrapper
+                                each i in irecomItems
+                                    .swiper-slide.brecom__item
+                                        +item(i)
+                        button(type='button' class='brecom__next').arrow.brecom__next
+                            +icon('next','arrow__svg')
+                    //- pag
+                    div(class='brecom__pag').brecom__pag
+                        .pag
+
+
+

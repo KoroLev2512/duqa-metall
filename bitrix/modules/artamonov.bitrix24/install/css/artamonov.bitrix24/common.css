@@ -1,0 +1,36 @@
+.block-note {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.block-note ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.block-note .adm-info-message {
+    text-align: left;
+}
+
+.block-note .adm-info-message .info {
+    border-bottom: 1px solid rgba(205, 192, 146, 0.37);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.block-note .adm-info-message .scope li {
+    margin-bottom: 2px;
+}
+
+.block-note .adm-info-message .scope li:first-child {
+    margin-bottom: 10px;
+}
+
+.block-note .adm-info-message .scope li:last-child {
+    margin-bottom: 0;
+}
+
+form[name="bitrix24-extension-config"] .block-note .adm-info-message {
+    min-width: 350px;
+}

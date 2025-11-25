@@ -1,0 +1,140 @@
+.brands {
+  &__item {
+    @include col;
+    @include size(6);
+    position: relative;
+    border: 1px solid $border;
+    margin-bottom: 20px;
+    @include tr;
+    @include size-sm(12);
+
+    &:hover {
+      box-shadow: 0 0 8px rgba($black, 0.1);
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: calc(180 / 223 * 100%);
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+    }
+
+    &-img {
+      max-height: 100%;
+    }
+  }
+}
+
+.brand {
+
+  &__top {
+    margin-bottom: 60px;
+    @include md-block {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__left {
+    @include col;
+    @include size(2.3/9*24);
+    @include size-md(8);
+    @include size-sm(24);
+    @include sm-block {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    position: relative;
+    padding-top: calc(180 / 223 * 100%);
+    border: 1px solid $border;
+    margin-bottom: 20px;
+    @include sm-block {
+      width: 150px;
+      height: 120px;
+      margin: 0 auto;
+      padding-top: 0;
+      margin-bottom: 15px;
+    }
+
+    &-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      @include sm-block {
+        padding: 20px;
+      }
+    }
+  }
+
+  &__txt {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 25px;
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    fill: $main1;
+    color: $main1;
+    @include tr;
+
+    &:hover {
+      color: $text;
+      fill: $text;
+    }
+
+    &-svg {
+      width: 41px;
+      height: 8px;
+
+      margin-right: 10px;
+    }
+
+    &-txt {
+      font-size: 13px;
+
+    }
+  }
+
+  &__right {
+    @include col;
+    @include size(6.7/9*24);
+    @include size-md(16);
+    @include size-sm(24);
+  }
+
+  &__sub {
+    color: $headers;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    @include md-block {
+      margin-bottom: 15px;
+    }
+    @include sm-block {
+      font-size: 20px;
+    }
+  }
+
+}

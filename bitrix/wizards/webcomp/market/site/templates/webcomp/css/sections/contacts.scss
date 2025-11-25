@@ -1,0 +1,438 @@
+.contacts {
+  padding-bottom: 80px;
+  @include sm-block {
+    padding-bottom: 40px;
+  }
+
+  &__bread {
+    margin-bottom: 20px;
+    @include sm-block {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid $border;
+    @include md-block {
+      padding-bottom: 20px;
+    }
+    @include sm-block {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__row {
+    padding: 45px 0;
+    @include to(1100px) {
+      padding: 0;
+    }
+  ;
+
+    .row {
+      margin: 0 -60px;
+      @include to(1100px) {
+        margin: 0;
+        margin-left: 1px;
+      }
+    ;
+      @include sm-block {
+        margin: 0 -10px;
+      }
+    }
+  }
+
+  &__col {
+    width: calc(100% / 3);
+    border-right: 1px solid $border;
+    padding: 0 60px;
+    @include to(1100px) {
+      padding: 35px 50px;
+      width: 50%;
+      border: 1px solid $border;
+      margin-left: -1px;
+      margin-top: -1px;
+    }
+  ;
+    @include md-block {
+      padding: 25px 30px;
+    }
+    @include sm-block {
+      width: 100%;
+      margin-top: 0;
+      margin-left: 0;
+      border: none;
+      border-bottom: 1px solid $border;
+      padding: 25px 10px;
+    }
+
+    &:last-child {
+      border-color: transparent;
+      @include to(1100px) {
+        border-color: $border;
+      }
+    ;
+    }
+  }
+
+  &__item {
+    margin-top: 50px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include sm-block {
+      margin-top: 30px;
+    }
+  }
+
+  &__btn {
+    width: 166px;
+    height: 38px;
+    font-size: 12px;
+    margin-top: 25px;
+  }
+
+  &__map {
+
+  }
+
+  &__call {
+    margin-bottom: 45px;
+    @include sm-block {
+      margin-bottom: 0;
+    }
+  }
+
+  &__column {
+    @include col;
+    @include size(12);
+    @include to(1100px) {
+      @include size(24);
+      margin-bottom: 30px;
+      padding: 0 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  ;
+    @include sm-block {
+      padding: 0;
+      margin-bottom: 0;
+    }
+    @include size-sm(24);
+  }
+
+  &__bottom {
+    .container {
+      @include sm-block {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.contact {
+
+  &__top {
+    display: flex;
+    align-items: center;
+    //margin-bottom: 10px;
+    @include sm-block {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__svg {
+    fill: $main1;
+    margin-right: 10px;
+
+    &_pin {
+      width: 18px;
+      height: 23px;
+    }
+
+    &_metro {
+      width: 20px;
+      height: 20px;
+    }
+
+    &_date {
+      width: 20px;
+      height: 20px;
+    }
+
+    &_email {
+      width: 22px;
+      height: 18px;
+    }
+
+    &_tel2 {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__name {
+    color: $text2;
+    font-size: 14px;
+  }
+
+  &__link {
+    color: $headers;
+    font-size: 22px;
+    line-height: lh(22, 40);
+    @include sm-block {
+      font-size: 18px;
+      line-height: lh(18, 24.5);
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    @include sm-block {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-val {
+      white-space: nowrap;
+      color: $headers;
+      font-size: 22px;
+      margin-right: 20px;
+      line-height: lh(22, 40);
+      @include sm-block {
+        font-size: 18px;
+        line-height: lh(18, 24.5);
+      }
+    }
+
+    &-dept {
+      color: $text2;
+      font-size: 14px;
+    }
+  }
+
+}
+
+.ccall {
+  box-shadow: 0 0 10px rgba($black, 0.25);
+  background-color: $bg2;
+  padding: 40px 50px 60px 50px;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+
+  @include to(1100px) {
+    padding: 40px 20px;
+    padding-bottom: 0;
+  }
+  @include sm-block {
+    margin-top: 0;
+    box-shadow: none;
+    margin: 0 -10px;
+  }
+
+  &__title {
+    color: $headers;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @include sm-block {
+      font-size: 20px;
+    }
+  }
+
+  &__col {
+    @include col;
+    @include size(9);
+    @include to(1100px) {
+      @include size(12);
+      margin-bottom: 40px;
+    }
+  ;
+    @include size-sm(24);
+    @include sm-block {
+      margin-bottom: 25px;
+    }
+
+    &_small {
+      @include size(5);
+      @include to(1100px) {
+        @include size(24);
+      }
+    ;
+    }
+
+    &_row {
+      display: flex;
+    }
+  }
+
+  &__field {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid $border;
+    background-color: $bg;
+
+    font-size: 18px;
+    font-weight: 300;
+    padding: 11.5px 25px;
+    @include tr;
+    @include sm-block {
+      font-size: 16px;
+      padding: 12px;
+    }
+
+    &_area {
+      height: 171px;
+    }
+
+    &.error {
+      border-color: $validation;
+
+      &::placeholder {
+        color: $validation;
+
+      }
+    }
+  }
+
+  &__txt {
+    color: $text2;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    @include md-block {
+      margin-bottom: 35px;
+    }
+
+    a {
+      color: $main1;
+      text-decoration: underline;
+
+      &:hover {
+
+      }
+    }
+  }
+
+  &__submit {
+    width: 189px;
+    height: 37px;
+    font-size: 12px;
+    @include md-block {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.cblock {
+  border: 1px solid $border;
+  padding: 60px 50px;
+  height: 100%;
+  @include sm-block {
+    padding: 45px 15px;
+    border: none;
+    border-top: 1px solid $border;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  &__title {
+    color: $headers;
+    font-size: 35px;
+    font-weight: 700;
+    margin-right: 20px;
+    @include sm-block {
+      font-size: 20px;
+    }
+  }
+
+  &__svg {
+    fill: $main1;
+
+    &_bag {
+      width: 36px;
+      height: 34px;
+      @include sm-block {
+        width: 26px;
+        height: 23px;
+      }
+    }
+
+    &_metro {
+      width: 34px;
+      height: 34px;
+      @include sm-block {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__row {
+    align-items: flex-start;
+  }
+
+  &__col {
+    @include col;
+    @include size(12);
+    color: $black;
+    @include size-sm(24);
+    @include sm-block {
+      margin-bottom: 25px;
+    }
+
+    &:first-child {
+      @include sm-block {
+        order: 1;
+        margin-bottom: 0;
+      }
+    }
+
+
+    &_g {
+      padding: 15px 25px;
+      background: $bg2;
+    }
+  }
+
+  .content {
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#map {
+  height: 630px;
+  @include to(1100px) {
+    height: 559px;
+  }
+;
+  @include sm-block {
+    height: 255px;
+  }
+}
+
+.contacts__map + .contacts__call .ccall {
+  margin-top: -90px;
+}

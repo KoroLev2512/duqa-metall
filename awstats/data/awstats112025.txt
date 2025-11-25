@@ -1,0 +1,326 @@
+AWSTATS DATA FILE 7.7 (build 20180105)
+# If you remove this file, all statistics for date 202511 will be lost/reset.
+# Last config file used to build this data file was ./awstats.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 1971                
+POS_TIME 2644                
+POS_VISITOR 6473                
+POS_DAY 7195                
+POS_DOMAIN 3291                
+POS_LOGIN 3578                
+POS_ROBOT 3733                
+POS_WORMS 4103                
+POS_EMAILSENDER 4234                
+POS_EMAILRECEIVER 4377                
+POS_SESSION 7501                
+POS_SIDER 7658                
+POS_FILETYPES 4512                
+POS_DOWNLOADS 4597                
+POS_OS 4726                
+POS_BROWSER 4827                
+POS_SCREENSIZE 5104                
+POS_UNKNOWNREFERER 5178                
+POS_UNKNOWNREFERERBROWSER 5299                
+POS_ORIGIN 5415                
+POS_SEREFERRALS 5547                
+POS_PAGEREFS 5702                
+POS_SEARCHWORDS 5877                
+POS_KEYWORDS 6029                
+POS_MISC 2308                
+POS_ERRORS 6088                
+POS_CLUSTER 3434                
+POS_SIDER_404 6164                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20251124194329 3 368 9997346623797
+FirstTime 20251101220622
+LastTime 20251119060916
+LastUpdate 20251125000207 3 0 3 0 0
+TotalVisits 16                  
+TotalUnique 16                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 16                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+TotalMisc 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+DirectorSupport 0 0 0
+AddToFavourites 0 1 0
+RealPlayerSupport 0 0 0
+FlashSupport 0 0 0
+QuickTimeSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 2 2 2176
+1 0 0 0 16 16 5962535
+2 4 4 2348472 13 13 931523
+3 64 64 26361460 18 18 2496821
+4 1 1 587118 11 11 13521
+5 6 6 2348472 31 37 6085820
+6 4 4 2348472 0 1 207647
+7 0 0 0 4 5 218350
+8 1 1 587118 8 8 7917
+9 0 0 0 8 8 595535
+10 0 0 0 6 6 2894
+11 0 0 0 2 2 589119
+12 2 2 587118 5 5 7943
+13 0 0 0 13 13 600762
+14 0 0 0 18 18 367874
+15 0 0 0 6 6 5441
+16 0 0 0 4 4 343307
+17 0 0 0 5 5 342910
+18 0 0 0 11 11 1514348
+19 0 0 0 2 2 2554
+20 0 0 0 3 4 2459
+21 0 0 0 5 5 4550
+22 2 2 587118 10 10 597824
+23 0 0 0 3 3 2328
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 5
+in 68 68 27535696
+ru 9 9 5284062
+us 5 5 1761354
+eg 1 1 587118
+ir 1 1 587118
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 6
+yandex 76 6366337 20251124194329 0
+googlebot 67 1672408 20251124050538 0
+^mozilla\/5\.0$ 32 5818118 20251107052402 0
+ning 17 4668412 20251123061533 0
+bot[\s_+:,\.\;\/\\-] 16 32016 20251117214222 0
+no_user_agent 4 2348472 20251122022341 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 1
+html 84 35755348 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 3
+/.well-known/security.txt 4 0 415294
+/ads.txt 2 0 415294
+/app-ads.txt 2 0 415294
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 3
+linux 66 66
+Unknown 2 2
+win10 16 16
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 12
+netscape5.0 2 2
+chrome142.0.0.0 2 2
+Unknown 2 2
+chrome104.0.5112.114 1 1
+chrome128.0.0.0 3 3
+chrome122.0.0.0 2 2
+mozilla 64 64
+chrome140.0.0.0 1 1
+opera122.0.0.0 2 2
+chrome141.0.0.0 2 2
+chrome136.0.0.0 1 1
+chrome121.0.0.0 2 2
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 1
+Go-http-client/1.1 20251107052402
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+Go-http-client/1.1 20251107052402
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 75 75
+From1 0 0
+From2 7 7
+From3 2 2
+From4 0 0
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 1
+yandex 7 7
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 1
+http://92.53.114.88:80 2 2
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 0
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 0
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 16
+103.105.167.123 64 64 26361460 20251102035918
+45.148.10.157 4 4 1174236 20251107052402
+104.194.198.173 2 2 587118 20251115125555
+50.118.248.164 2 2 587118 20251101220624
+188.17.164.18 1 1 587118 20251108020901
+46.242.118.51 1 1 587118 20251107050314
+156.244.31.171 1 1 587118 20251108020849
+212.220.239.227 1 1 587118 20251105061312
+37.233.82.88 1 1 587118 20251118080144
+188.17.207.57 1 1 587118 20251109053050
+37.110.130.120 1 1 587118 20251115060309
+188.17.209.42 1 1 587118 20251117060401
+5.140.93.231 1 1 587118 20251119060916
+54.177.30.11 1 1 587118 20251108020810
+80.82.63.57 1 1 587118 20251111044329
+31.56.240.148 1 1 587118 20251108020759
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 11
+20251101 2 2 587118 1
+20251102 64 64 26361460 1
+20251105 1 1 587118 1
+20251107 5 5 1761354 2
+20251108 4 4 2348472 4
+20251109 1 1 587118 1
+20251111 1 1 587118 1
+20251115 3 3 1174236 2
+20251117 1 1 587118 1
+20251118 1 1 587118 1
+20251119 1 1 587118 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 2
+0s-30s 15
+30s-2mn 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 46
+/ 22 10568124 16 15
+/catalog/chernyy_metalloprokat/setka/ 5 1838005 0 1
+/catalog/chernyy_metalloprokat/dvutavrovaya_balka/ 5 1798496 0 0
+/catalog/nerzhaveyushchaya_stal/setka_iz_nerzhaveyki/ 4 2742246 0 0
+/catalog/perforirovannyy_list/ 3 1101937 0 0
+/catalog/truby_stalnye/truba_elektrosvarnaya_profilnaya/ 3 4303632 0 0
+/catalog/truby_stalnye/truba_besshovnaya/ 2 850832 0 0
+/catalog/potolki/zerkalnye_potolki/ 2 616442 0 0
+/company/documents/ 1 211061 0 0
+/catalog/chernyy_metalloprokat/kanaty_stalnye/ 1 333106 0 0
+/catalog/mednyy_prokat/mednaya_panel/mednaya_panel_perforatsiya_0_8kh1000kh2000_mm/ 1 263854 0 0
+/catalog/chernyy_metalloprokat/shveller/ 1 404901 0 0
+/catalog/latunnyy_prokat/latunnaya_polosa/ 1 255353 0 0
+/catalog/mednyy_prokat/mednyy_krug_prutok/krug_mednyy_prutok_30_mm/ 1 264057 0 0
+/catalog/latunnyy_prokat/ugolok_latunnyy/ 1 340832 0 0
+/catalog/nerzhaveyushchaya_stal/polosa_iz_nerzhaveyki/polosa_nerzhaveyushchaya_80kh8_mm/ 1 264205 0 0
+/catalog/mednyy_prokat/mednaya_panel/mednaya_panel_3kh1000_kh_2000_mm/ 1 264427 0 0
+/catalog/mednyy_prokat/mednyy_list_listovaya_med/ 1 360815 0 0
+/catalog/ograzhdeniya_dlya_lestnits/krepleniya_stoek/ 1 255461 0 0
+/company/delivery/ 1 212028 0 0
+/catalog/mednyy_prokat/mednaya_panel/ 1 354930 0 0
+/services/santehnicheskie-raboty/kapitalnyy-remont-pod-klyuch-i-ustanovka-peregorodok-pod-zamok/ 1 219546 0 0
+/catalog/mednyy_prokat/krovelnaya_med_mednaya_krovlya/ 1 351209 0 0
+/company/ 1 213773 0 0
+/company/brands/ritmix/ 1 220135 0 0
+/catalog/chernyy_metalloprokat/kanaty_stalnye/kanat_stalnoy_14_gost_2688_80/ 1 264072 0 0
+/catalog/perforirovannyy_list/perforirovannyy_alyuminievyy_list/ 1 255638 0 0
+/catalog/dekor_nerzhaveyka/list_dekorativnyy_riflenyy/dp_3_puls_nerzh_1kh1250kh2500_zerkalo/ 1 264407 0 0
+/catalog/metallicheskie_porogi_napolnye_dlya_pola_raskladka_plintus/alyuminievye_porogi/alyuminievyy_porog_p25_25kh3/ 1 264552 0 0
+/catalog/metallicheskie_porogi_napolnye_dlya_pola_raskladka_plintus/ 1 550912 0 0
+/catalog/nerzhaveyushchaya_stal/polosa_iz_nerzhaveyki/ 1 339432 0 0
+/catalog/chernyy_metalloprokat/ 1 916234 0 0
+/catalog/alyuminievyy_prokat/gladkie_alyuminievye_listy/list_alyuminievyy_amg2m_10_0kh1500kh3000/ 1 261852 0 0
+/catalog/alyuminievyy_prokat/riflenye_alyuminievye_listy/ 1 440315 0 0
+/personal/ 1 213656 0 0
+/catalog/truby_stalnye/truba_besshovnaya/truby_kh_d_63kh3/ 1 264121 0 0
+/catalog/chernyy_metalloprokat/setka/setka_stalnaya_pletenaya_10kh1_1_00/ 1 263739 0 0
+/catalog/nerzhaveyushchaya_stal/ugolki_iz_nerzhaveyushchey_stali/ 1 381948 0 0
+/catalog/chernyy_metalloprokat/dvutavrovaya_balka/balka_nizkolegirovannaya_sh4_60_dlina_12_m_marka_s355/ 1 264451 0 0
+/catalog/chernyy_metalloprokat/lenta/ 1 354334 0 0
+/catalog/chernyy_metalloprokat/polosa_stalnaya/ 1 372784 0 0
+/catalog/alyuminievyy_prokat/alyuminievye_profilnye_truby/alyuminievaya_truba_kvadratnaya_30kh30kh1_5/ 1 264475 0 0
+/company/projects/ 1 214171 0 0
+/catalog/chernyy_metalloprokat/shestigrannik_metallicheskiy/ 1 386855 0 0
+/company/pay/ 1 211795 0 0
+/catalog/metallicheskie_porogi_napolnye_dlya_pola_raskladka_plintus/alyuminievye_porogi/ 1 396198 0 0
+END_SIDER

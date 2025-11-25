@@ -1,0 +1,13 @@
+//@prepros-append pages/device.min.js
+//@prepros-append pages/common.js
+//@prepros-append pages/header.js
+//@prepros-append pages/index.js
+//@prepros-append pages/popup.js
+//@prepros-append pages/mmenu.js
+//@prepros-append pages/catalog.js
+//@prepros-append pages/product.js
+//@prepros-append pages/basket.js
+//@prepros-append pages/compare.js
+//@prepros-append pages/contacts.js
+//@prepros-append pages/cabinet.js
+//@prepros-append pages/footer.js

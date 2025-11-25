@@ -1,0 +1,25 @@
+<?
+use Bitrix\Main\Localization\Loc;
+Loc::loadMessages(__FILE__);
+
+$webcomp_market_default_option = [
+    # MAIN BLOCK
+    "WEBCOMP_STRING_SLOGAN"      	    => Loc::getMessage("DEFAULT_OPTIONS_WEBCOMP_STRING_SLOGAN"),
+    "WEBCOMP_FILE_SITE_LOGO"      	    => Loc::getMessage("DEFAULT_OPTIONS_WEBCOMP_FILE_SITE_LOGO"),
+    "WEBCOMP_SELECT_SITE_THEME_COLOR"   => Loc::getMessage("DEFAULT_OPTIONS_WEBCOMP_SELECT_SITE_THEME_COLOR"),
+
+    # VALIDATE BLOCK
+    "WEBCOMP_STRING_PHONE_MASK"         => Loc::getMessage("DEFAULT_OPTIONS_WEBCOMP_STRING_PHONE_MASK"),
+
+    # CATALOG BLOCK
+    "WEBCOMP_STRING_DECIMAL"      => 0,
+    "WEBCOMP_STRING_DECIMAL_POINT"  => ".",
+    "WEBCOMP_STRING_THOUSANDTH_SEPORATOR" => " ",
+
+    #OTHER
+    "WEBCOMP_CHECKBOX_USE_POLICY"       => Loc::getMessage("DEFAULT_OPTIONS_YES"),
+    "WEBCOMP_CHECKBOX_DEFAULT_CHECK"    => Loc::getMessage("DEFAULT_OPTIONS_YES"),
+
+    #SECTIONS
+    "WEBCOMP_CHECKBOX_SECTIONS" => Loc::getMessage("DEFAULT_OPTIONS_YES"),
+];

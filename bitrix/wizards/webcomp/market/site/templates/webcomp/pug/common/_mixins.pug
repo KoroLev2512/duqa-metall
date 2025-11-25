@@ -1,0 +1,439 @@
+mixin icon(iconName, iconClass)
+    svg(class=`${iconClass}`)
+        use(xlink:href=`/images/icons/sprite.svg#${iconName}`)
+
+mixin iconPath(iconPath,iconName, iconClass)
+    svg(class=`${iconClass}`)
+        use(xlink:href=`${iconPath}/sprite.svg#${iconName}`)
+
+mixin image(imagePath, imageClass, imageAlt)
+    if !imageAlt
+        - var alt = 'lorem'
+    else
+        - var alt = imageAlt
+    img(src=`${imagePath}`, alt=`${alt}`, class=`${imageClass}`)
+
+mixin logo(cls)
+    a(href='/' class=cls).logo
+        +image('images/icons/logo.png','','logo__img')
+
+mixin menu(cls,nofollow)
+    nav(class=cls).menu
+        .menu__list
+            each i in menu
+                div(class=i.catalogMenu ? 'menu__item_catalog jsHoverItem' : '').menu__item
+                    a(href=i.href class=i.arrow ? 'menu__link_sub jsHoverLink' : '' rel=nofollow ? 'nofollow' : '').menu__link= i.title
+                    if i.submenu
+                        .submenu
+                            each cat in i.submenu
+                                .submenu__cat
+                                    a(href='category.html' rel=nofollow ? 'nofollow' : '').submenu__title
+                                        svg(viewBox='0 0 16 14', xmlns='http://www.w3.org/2000/svg' class='submenu__title-svg')
+                                            path(d='M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z')
+                                        span.submenu__title-title= cat
+                                    .submenu__list
+                                        each item in ['Беговые дорожки','Велотренажеры','Универсльные тренажеры','Умная спортивная одежда']
+                                            a(href='category.html' rel=nofollow ? 'nofollow' : '').submenu__item= item
+                                    a(href='catalog.html').submenu__more
+                                        span.submenu__more-round
+                                        span.submenu__more-round
+                                        span.submenu__more-round
+                    if i.submenu2
+                        .submenu2
+                            each item in [1,2,3,4,5,6,7,8]
+                                div(class='jsHoverItem').submenu2__item
+                                    a(href='services.html' class='jsHoverLink' rel=nofollow ? 'nofollow' : '').submenu2__link.submenu2__link_arr Мобильные устройства
+                                    .submenu2.submenu2_right
+                                        each subitem in [1,2,3,4]
+                                            a(href='service.html' rel=nofollow ? 'nofollow' : '').submenu2__link Мобильные устройства
+        .menu__more.mmore
+            button(type='button').mmore__btn
+                span.mmore__btn-round
+                span.mmore__btn-round
+                span.mmore__btn-round
+            .mmore__list
+
+mixin phone(cls)
+    div(class=cls).phone
+        a(href='tel:+7(495)111-11-11').phone__phone
+            +icon('tel','phone__phone-svg')
+            span.phone__phone-link +7 (495) 111-11-11
+        .phone__drop
+            a(href='tel:+7(495)000-00-00').phone__drop-item
+                span.phone__drop-link +7 (495) 000-00-00
+                span.phone__drop-title Отдел продаж
+            a(href='tel:+7(495)000-00-00').phone__drop-item
+                span.phone__drop-link +7 (495) 000-00-00
+                span.phone__drop-title Бухгалтерия
+
+mixin title (title, sub, href, cls)
+    div(class=cls + '__top').title
+        h2(class=cls + '__title').title__title= title
+        a(href=href class=cls + '__sub').title__subtitle= sub
+
+mixin sticks()
+    span.sticks
+        span.stick.stick_hit Хит
+        span.stick.stick_recom Советуем
+        span.stick.stick_new Новинка
+        span.stick.stick_action Акция
+
+mixin item(props)
+    // Дополнительные классы - nopadding, noheight, disabled
+    a(href='product.html').item
+        span.item__top
+            span.item__img
+                span.item__propportion.pt.pt_221x177
+                span.item__img-wrap
+                    +image(props.src,'item__img-img')
+                span.item__sticks
+                    if props.sticks
+                        +sticks()
+                span.item__controls
+                    span.item__control.item__control_compare.jsCompare
+                        +icon('compare','item__control-svg')
+                    span.item__control.item__control_favorite.jsFavorite.active
+                        +icon('heart','item__control-svg')
+
+
+        span.item__bottom
+            span.item__content
+                if props.enabled
+                    span.item__avaible
+                        span.item__avaible__round
+                        span.item__avaible__txt В наличии
+
+                span.item__prices
+                    span.item__price.price= props.price
+                    span.item__priceold.priceold= props.priceOld
+
+                //- Максимальная длина 90 символов, вместе с точками
+                span.item__title= props.title
+
+            span.item__btns
+                span(class=props.inbasket ? 'add_in' : '').item__buy.jsAdd.add
+                    +icon('check','add__svg')
+                    span.add__txt ДОБАВИТЬ В КОРЗИНУ
+                    span.add__txt2 ТОВАР В КОРЗИНЕ
+                    +icon('cart','add__mobile')
+
+                span.item__fast.jsFast.btn3
+                    +icon('one','btn3__svg')
+                    span.btn3__txt Купить в 1 клик
+
+        span.item__controls.item__controls_list
+            span.item__control.item__control_compare.jsCompare
+                +icon('compare','item__control-svg')
+            span.item__control.item__control_favorite.jsFavorite.active
+                +icon('heart','item__control-svg')
+
+mixin itemCompare(props)
+    // Дополнительные классы - nopadding, noheight, disabled
+    a(href='product.html').item
+        span.item__top
+            span.item__img
+                span.item__propportion.pt.pt_221x177
+                span.item__img-wrap
+                    +image(props.src,'item__img-img')
+                span.item__sticks
+                    if props.sticks
+                        +sticks()
+                span.item__controls
+                    span.item__control.item__control_favorite.jsFavorite.active
+                        +icon('heart','item__control-svg')
+                    span.item__control.item__control_close.jsClose
+                        +icon('close','item__control-svg')
+
+
+        span.item__bottom
+            span.item__content
+                if props.enabled
+                    span.item__avaible
+                        span.item__avaible__round
+                        span.item__avaible__txt В наличии
+
+                span.item__prices
+                    span.item__price.price= props.price
+                    span.item__priceold.priceold= props.priceOld
+
+                //- Максимальная длина 90 символов, вместе с точками
+                span.item__title= props.title
+
+            span.item__btns
+                span(class=props.inbasket ? 'add_in' : '').item__buy.jsAdd.add
+                    +icon('check','add__svg')
+                    span.add__txt ДОБАВИТЬ В КОРЗИНУ
+                    span.add__txt2 ТОВАР В КОРЗИНЕ
+                    +icon('cart','add__mobile')
+
+                span.item__fast.jsFast.btn3
+                    +icon('one','btn3__svg')
+                    span.btn3__txt Купить в 1 клик
+
+        span.item__controls.item__controls_list
+            span.item__control.item__control_favorite.jsFavorite.active
+                +icon('heart','item__control-svg')
+            span.item__control.item__control_close.jsClose
+                +icon('close','item__control-svg')
+
+mixin citem(cls)
+    div(class=cls).citem
+        //- top
+        .citem__top
+            //- img
+            a(href='product.html').citem__img
+                span.citem__img-wrap
+                    +image('images/content/catalog/2.png','citem__img-img')
+            .citem__btns.citem__btns_m
+                button(type='button').citem__btn.citem__btn_compare.jsCompare
+                    +icon('compare','citem__btn-svg citem__btn-svg_compare')
+                button(type='button').citem__btn.citem__btn_favorite.jsFavorite.active
+                    +icon('heart','citem__btn-svg citem__btn-svg_heart')
+                button(type='button').citem__btn.citem__btn_cart.jsBuy
+                    +icon('cart','citem__btn-svg citem__btn-svg_heart')
+                button(type='button').citem__del
+                    +icon('close','citem__del-svg')
+
+        //- bottom
+        .citem__bottom
+            //- content
+            .citem__content
+                .citem__avaible
+                    .citem__avaible__round
+                    .citem__avaible__txt В наличии
+                .citem__prices
+                    span.item__price.price 7 000 РУБ.
+                    span.item__priceold.priceold 65 000 руб.
+                a(href='product.html').citem__title Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...
+            //- calc
+            .citem__calc
+                .citem__count.count.jsCartCount
+                    button(type='button').citem__count-minus.count__minus.count__btn -
+                    input(type='number' min='1' value='1' step='1' max='999').citem__count-input.count__input
+                    button(type='button').citem__count-plus.count__plus.count__btn +
+                .citem__total 7 000 РУБ.
+            //- btns
+            .citem__btns
+                button(type='button').citem__btn.jsCompare
+                    +icon('compare','citem__btn-svg citem__btn-svg_compare')
+                button(type='button').citem__btn.citem__btn_favorite.jsFavorite.active
+                    +icon('heart','citem__btn-svg citem__btn-svg_heart')
+                button(type='button').citem__btn.citem__btn_cart.jsBuy
+                    +icon('cart','citem__btn-svg citem__btn-svg_heart')
+                button(type='button').citem__del
+                    +icon('close','citem__del-svg')
+
+mixin icat(title, src, cls)
+    a(href='category.html' class=cls).icat
+        span.icat__img
+            +image(src,'icat__img-img')
+        span.icat__bottom
+            span.icat__title= title
+
+mixin amenu (menu,submenu)
+    .amenu
+        //- title
+        .amenu__title КАТАЛОГ
+
+        //- list
+        .amenu__list
+            each i in menu
+                .aitem.amenu__item
+                    a(href='category.html').aitem__link.aitem__link_arr= i.title
+                    .asubmenu
+                        each j in submenu
+                            a(href='category.html').asubmenu__item= j
+
+mixin amenu2()
+    .amenu
+        //- title
+        .amenu__title КОМПАНИЯ
+
+        //- list
+        .amenu__list
+            each i in asideMenu3
+                .aitem.amenu__item
+                    a(href=i.href class=i.cls).aitem__link= i.title
+
+mixin amenu3()
+    .amenu
+        //- title
+        .amenu__title Личный кабинет
+
+        //- list
+        .amenu__list
+            each i in asideMenu4
+                .aitem.amenu__item
+                    a(href=i.href class=i.cls).aitem__link= i.title
+            .aitem.amenu__item
+                a(href='').aitem__exit.aitem__link
+                    +icon('arr-s-l','aitem__exit-svg')
+                    span.aitem__exit-txt Выйти
+
+mixin pagination()
+    .pagination
+        a(href='/').pagination__item.pagination__item_left
+            +icon('arr-l','pagination__item-svg')
+        a(href='/').pagination__item.active
+            span.pagination__item-txt 1
+        a(href='/').pagination__item
+            span.pagination__item-txt 2
+        a(href='/').pagination__item
+            span.pagination__item-txt 3
+        a(href='/').pagination__item
+            span.pagination__item-txt ...
+        a(href='/').pagination__item
+            span.pagination__item-txt 48
+        a(href='/').pagination__item.pagination__item_right
+            +icon('arr-r','pagination__item-svg')
+
+mixin irecom(title,link,href,cls)
+    div(class=cls).irecom
+        .container
+            //- top
+            +title(title,link,href,'irecom')
+            //- bottom
+            .irecom__bottom
+                .irecom__tabset.tabset
+                    .tabset__select
+                        select.tabset__select-select
+                            each sw,swx in irecom.sws
+                                option(value='irecom' + swx)= sw.title
+
+                    each sw,swx in irecom.sws
+                        input(type='radio' name='irecom' id='irecom' + swx checked=sw.checked).irecom__input.tabset__input
+                        label(for='irecom' + swx).irecom__label.tabset__label= sw.title
+
+                    .irecom__tabs.tabset__tabs
+                        each tab,tabx in irecom.tabs
+                            .irecom__tab.tabset__tab
+                                div(data-speed='500'  data-pagination='true').irecom__slider
+                                    button(type='button' class='irecom__prev-' + tabx).arrow.irecom__prev
+                                        +icon('prev','arrow__svg')
+                                    div(class='irecom__container-' + tabx).swiper-container.irecom__container
+                                        .swiper-wrapper
+                                            each i in tab.list
+                                                .swiper-slide.irecom__item
+                                                    +item(i)
+                                    button(type='button' class='irecom__next-' + tabx).arrow.irecom__next
+                                        +icon('next','arrow__svg')
+                                //- pag
+                                div(class='irecom__pag-' + tabx).irecom__pag
+                                    .pag
+
+mixin iactions(cls)
+    div(class=cls).iactions
+        .container
+            //- top
+            +title('Акции','ВСЕ АКЦИИ','actions.html','iactions')
+            //- bottom
+            .iactions__bottom
+                div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').iactions__slider
+                    button(type='button').arrow.iactions__prev
+                        +icon('prev','arrow__svg')
+                    .swiper-container.iactions__container
+                        .swiper-wrapper
+                            each i in iactions
+                                .swiper-slide.iactions__item
+                                    +iaction(i)
+
+                    button(type='button').arrow.iactions__next
+                        +icon('next','arrow__svg')
+                //- pag
+                .iactions__pag
+                    .pag
+
+mixin iaction(i)
+    a(href='action.html').iaction
+        span.iaction__img
+            +image(i.src,'iaction__img-img')
+        span.iaction__bottom
+            span.iaction__date= i.date
+            span.iaction__title= i.title
+
+mixin rating(count)
+    span.rating
+        span.rating__list
+            span.rating__star.active
+                +icon('star','rating__star-svg')
+            span.rating__star.active
+                +icon('star','rating__star-svg')
+            span.rating__star.active
+                +icon('star','rating__star-svg')
+            span.rating__star
+                +icon('star','rating__star-svg')
+            span.rating__star
+                +icon('star','rating__star-svg')
+        if count
+            span.rating__count (3)
+
+mixin iservice(i)
+    a(href='service.html').iservice
+        span.iservice__left
+            span.iservice__title= i.title
+            +icon('arrow','iservice__svg')
+        span.iservice__right
+            +image(i.src,'iservice__img')
+
+mixin precom(title)
+    .precom
+        .precom__top
+            .precom__title= title
+            .precom__nav
+                button(type='button').precom__prev.product__arr
+                    +icon('arr-l','product__arr-svg')
+                button(type='button').precom__next.product__arr
+                    +icon('arr-r','product__arr-svg')
+
+        .precom__bottom
+            div(data-speed='500'  data-pagination='true').precom__slider
+                .swiper-container.precom__container
+                    .swiper-wrapper
+                        each i in irecomItems
+                            .swiper-slide.precom__item
+                                +item(i)
+                .precom__pag
+                    .pag
+
+mixin nitem()
+    a(href='new.html').nitem
+        span.nitem__top
+            span.nitem__img
+                +image('images/content/news/img.jpg', 'nitem__img-img')
+        span.nitem__bottom
+            span.nitem__date 20.12.2019
+            span.nitem__title Появился концепт iPhone 12 Pro с четырьмя камерами
+            span.nitem__txt Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров...
+            span.nitem__link.link
+                span.link__txt.nitem__link-txt Подробнее
+                +icon('arrow-s','link__svg nitem__link-svg')
+
+mixin pdoc()
+    .pdocs
+        each i in productDocs
+            .pdoc
+                .pdoc__left
+                    +image(i.src,'pdoc__img')
+                .pdoc__right
+                    .pdoc__title= i.title
+                    a(href='/' download=true).pdoc__link Скачать
+
+mixin nservices()
+    .nservices
+        .nservices__title Услуги по теме
+        .nservices__list
+            each i in nservices
+                a(href='service.html').nservice
+                    span.nservice__left
+                        span.nservice__img
+                            +image(i.src,'nservice__img-img')
+                    span.nservice__right
+                        span.nservice__main
+                            span.nservice__title= i.title
+                            span.nservice__txt= i.txt
+                        span.nservice__link
+                            span.link__txt Подробнее
+                            +icon('arrow-s','link__svg')
+
+
+
