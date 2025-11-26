@@ -1,0 +1,63 @@
+Options -Indexes
+ErrorDocument 404 /404.php
+
+############################################
+# РЕДИРЕКТ СО ВСЕХ ЗЕРКАЛ НА ОСНОВНОЙ ДОМЕН #
+############################################
+RewriteEngine On
+
+# www → без www (если нужно — поменяю обратно)
+RewriteCond %{HTTP_HOST} ^www\.duqametall\.ru$ [NC]
+RewriteRule ^(.*)$ https://duqametall.ru/$1 [R=301,L]
+
+# Редирект старого домена tw1.ru → основной
+RewriteCond %{HTTP_HOST} ^(www\.)?ca97123\.tw1\.ru$ [NC]
+RewriteRule ^(.*)$ https://duqametall.ru/$1 [R=301,L]
+
+############################################
+# ОСНОВНЫЕ ПРАВИЛА BITRIX (urlrewrite.php) #
+############################################
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+  # Пускать в обход только файлы, папки и символические ссылки
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Защита от "кривого" rewrite
+  RewriteCond %{REQUEST_URI} !^/bitrix/urlrewrite\.php$
+
+  # Основное правило
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L,QSA]
+
+  # Передача авторизации
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+############################################
+# INDEX FILES                              
+############################################
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+############################################
+# ОТКЛЮЧЕНИЕ MultiViews                    
+############################################
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>
+
+############################################
+# КЭШИРОВАНИЕ STATIC                       
+############################################
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 days"
+  ExpiresByType image/gif "access plus 3 days"
+  ExpiresByType image/png "access plus 3 days"
+  ExpiresByType text/css "access plus 3 days"
+  ExpiresByType application/javascript "access plus 3 days"
+</IfModule>

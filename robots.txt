@@ -1,0 +1,17 @@
+User-Agent: *
+Disallow: /bitrix/
+Disallow: /local/templates/*/components/
+Disallow: /upload/tmp/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cgi-bin/
+
+Allow: /
+
+# Очистка дублей URL с параметрами, которые не влияют на содержание
+Clean-param: view&sort&order&from&ref&utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&fbclid /
+
+Host: https://duqametall.ru
+
+Sitemap: https://duqametall.ru/sitemap.xml
