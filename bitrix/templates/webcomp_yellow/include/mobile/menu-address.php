@@ -1,1 +1,0 @@
-<a class="header__link" href="https://yandex.ru/maps/-/CKEMaK--" target="_blank"> <svg class="header__link-svg"> <use xlink:href="<span id=" title="Код PHP: &lt;?= SITE_TEMPLATE_PATH ?&gt;" class="bxhtmled-surrogate"></use></svg><?= SITE_TEMPLATE_PATH ?></a>

@@ -1,1 +1,0 @@
-<div class="header__logo-txt"><?=$arParams["SLOGAN"]?></div>

@@ -1,1 +1,0 @@
-<a target="_blank" class="header__link" href="https://yandex.ru/maps/?text=<?= urlencode('Москва, ул. Нижние поля, д.31') ?>"> <svg class="header__link-svg"> <use xlink:href="/images/icons/sprite.svg#pin"></use> </svg>г.Пермь, 25 Октября, 77, 2-й этаж, офис, 4</a>
