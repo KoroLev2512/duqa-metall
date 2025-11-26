@@ -1,0 +1,154 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "949e674329f9576bbf0f67eda184850e",
+    "packages": [
+        {
+            "name": "flamix/b24-lead",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FLAMIXSOFTWARE/b24-lead.git",
+                "reference": "051ce0b887c45f0fc53f81c42cea855c9d25ca8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FLAMIXSOFTWARE/b24-lead/zipball/051ce0b887c45f0fc53f81c42cea855c9d25ca8c",
+                "reference": "051ce0b887c45f0fc53f81c42cea855c9d25ca8c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "flamix/conversions": "^1",
+                "php": ">=7.4",
+                "xsuchy09/utm-cookie": "^2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flamix\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Roman Shkabko",
+                    "email": "r.shkabko@flamix.email",
+                    "homepage": "http://flamix.software"
+                }
+            ],
+            "description": "B24 Lead SDK",
+            "homepage": "https://flamix.solutions",
+            "support": {
+                "issues": "https://github.com/FLAMIXSOFTWARE/b24-lead/issues",
+                "source": "https://github.com/FLAMIXSOFTWARE/b24-lead/tree/v1.9.2"
+            },
+            "time": "2024-11-20T14:59:05+00:00"
+        },
+        {
+            "name": "flamix/conversions",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FLAMIXSOFTWARE/conversions.git",
+                "reference": "03330d8d26a14a08887445eb665309d7f6c4834c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FLAMIXSOFTWARE/conversions/zipball/03330d8d26a14a08887445eb665309d7f6c4834c",
+                "reference": "03330d8d26a14a08887445eb665309d7f6c4834c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flamix\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Roman Shkabko",
+                    "email": "r.shkabko@flamix.email",
+                    "homepage": "http://flamix.software"
+                }
+            ],
+            "description": "Class to work with conversion APP",
+            "homepage": "https://conversion.app.flamix.solutions",
+            "support": {
+                "issues": "https://github.com/FLAMIXSOFTWARE/conversions/issues",
+                "source": "https://github.com/FLAMIXSOFTWARE/conversions/tree/v1.0"
+            },
+            "time": "2023-10-04T11:25:25+00:00"
+        },
+        {
+            "name": "xsuchy09/utm-cookie",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xsuchy09/utm-cookie.git",
+                "reference": "01820b0f0e226d1af44ebe283eb68efe33bd907a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xsuchy09/utm-cookie/zipball/01820b0f0e226d1af44ebe283eb68efe33bd907a",
+                "reference": "01820b0f0e226d1af44ebe283eb68efe33bd907a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "UtmCookie": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Ing. Petr Suchy",
+                    "email": "suchy@wamos.cz",
+                    "homepage": "http://www.wamos.cz/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Utm-Cookie saves utm parameters from url into cookie with defined lifetime (default 7 days). Than cookie (utm) can be used later without parsing google or any other cookies.",
+            "homepage": "https://github.com/xsuchy09/utm-cookie",
+            "keywords": [
+                "UTM",
+                "analytics",
+                "cookie"
+            ],
+            "support": {
+                "issues": "https://github.com/xsuchy09/utm-cookie/issues",
+                "source": "https://github.com/xsuchy09/utm-cookie/tree/2.0.5"
+            },
+            "time": "2024-10-18T14:04:21+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "flamix/b24-lead": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.4"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}

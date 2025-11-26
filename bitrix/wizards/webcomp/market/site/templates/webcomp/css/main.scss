@@ -1,0 +1,65 @@
+//variables
+//fonts
+$font: var(--font);
+
+//colors
+$bg: var(--bg);
+$bg2: var(--bg2);
+$main1: var(--main1);
+$black: var(--black);
+$icon: var(--icon);
+$text: var(--text);
+$main3: var(--main3);
+$main2: var(--main2);
+$validation: var(--validation);
+$warning: var(--warning);
+$link: var(--link);
+$text2: var(--text2);
+$headers: var(--headers);
+$border: var(--border);
+$border2: var(--border2);
+$hit: var(--hit);
+$recom: var(--recom);
+$footer: var(--footer);
+$footer2: var(--footer2);
+
+//another
+$font-size: 16px;
+
+//layout
+@import "layout/mixins";
+@import "layout/fonts";
+@import "layout/smart-grid";
+@import "layout/adjustment";
+@import "layout/common";
+
+//sections
+@import "sections/header";
+@import "sections/index";
+@import "sections/catalog";
+@import "sections/product";
+@import "sections/popup";
+@import "sections/loader";
+@import "sections/mmenu";
+@import "sections/basket";
+@import "sections/compare";
+@import "sections/services";
+@import "sections/actions";
+@import "sections/news";
+@import "sections/brands";
+@import "sections/about";
+@import "sections/contacts";
+@import "sections/notfound";
+@import "sections/cabinet";
+@import "sections/orders";
+@import "sections/lk";
+@import "sections/other";
+@import "sections/bx_filter";
+@import "sections/footer";
+
+
+.debug {
+  //@include debug(rgba(0,0,0,0.3), 1px solid red);
+  //z-index: 100;
+  //top: 0;
+}

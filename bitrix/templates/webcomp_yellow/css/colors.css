@@ -1,0 +1,32 @@
+:root{
+    --font: 'SF Pro Display', Arial, sans-serif;
+
+    --main1: #304488;
+    --main2: #7c859f;
+    --main3: #14c264;
+
+    --bg: #ffffff;
+    --bg2: #f8f8f8;
+
+    --footer: #333333;
+    --footer2: #2d2d2d;
+
+    --text: #606060;
+    --text2: #9a9a9a;
+    --headers: #191919;
+
+    --border: #e8e8e8;
+    --border2: #ebebeb;
+
+    --icon: #cecece;
+    --link: #f6af24;
+
+    --validation: #f53535;
+    --warning: #8A6D3B;
+
+    --hit:#2d9cdb;
+    --recom:#bb6bd9;
+
+    --black: #000000;
+    --black_rgb: 0,0,0;
+}

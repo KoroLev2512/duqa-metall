@@ -1,0 +1,257 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+    - var main = true
+
+block content
+    main.index
+        //- banner
+        section.index__banner
+            .ibanner
+                //Настройка видимости стелочек регулируется классом ibanner__slider_arr, если есть этот класс - они всегда видны
+                div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').ibanner__slider.ibanner__slider_arr
+                    .swiper-container.ibanner__container
+                        //- slider
+                        .swiper-wrapper
+                            each i in [1,2,3,4,5]
+                                .swiper-slide.ibanner__slide
+                                    .ibanner__slide-imgs
+                                        picture
+                                            source(srcset='images/content/index/banner/img.jpg' type='image/jpeg' media='(min-width:991.9px)')
+                                            source(srcset='images/content/index/banner/img-t.jpg' type='image/jpeg' media='(min-width:768.9px)')
+                                            source(srcset='images/content/index/banner/img-m.jpg' type='image/jpeg' media='(min-width:320px)')
+                                            img(src='images/content/index/banner/img.jpg' alt='lorem1').ibanner__slide-img
+                                    .container.ibanner__slide-container
+                                        .row.ibanner__slide-row
+                                            .ibanner__slide-content
+                                                h2.ibanner__slide-title Строительные товары
+                                                .ibanner__slide-txt
+                                                    | Качественные товары оптом и в
+                                                    br
+                                                    | розницу. Начни строительство с умом.
+                                                .ibanner__slide-links
+                                                    a(href='product.html').ibanner__slide-link.btn Подробнее
+                                                    a(href='catalog.html').ibanner__slide-link.btn2 В каталог
+
+                    .ibanner__nav
+                        .container.ibanner__nav-container
+                            .ibanner__arrs
+                                //- nav
+                                .ibanner__prev
+                                    button(type='button').arr.ibanner__prev-btn
+                                        +icon('arr-l','arr__svg')
+                                .ibanner__next
+                                    button(type='button').arr.ibanner__next-btn
+                                        +icon('arr-r','arr__svg')
+                            //- pag
+                            .swiper-pagination.ibanner__pag
+        //- advantages
+        section.ibanner__advantages
+            .iadvantages
+                .container
+                    .iadvantages__row
+                        each i in advantages
+                            .iadvantage
+                                .iadvantage__img
+                                    +image(i.src,'iadvantage__img-img')
+                                h3.iadvantage__title= i.title
+                                .iadvantage__txt= i.txt
+        //- services
+        section.index__services
+            .iservices
+                .container
+                    +title('Наши услуги','Все услуги','services.html','iservices')
+                    .iservices__bottom
+                        .row
+                            each i in iservices
+                                .iservices__item
+                                    +iservice(i)
+        //- projects
+        section.index__projects
+            .iprojects
+                //- top
+                .container
+                    +title('Сданные проекты','ВСЕ РАБОТЫ','projects.html','iprojects')
+                //- bottom
+                .iprojects__bottom
+                    div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').iprojects__slider
+                        //- slider
+                        .swiper-container.iprojects__container
+                            .swiper-wrapper
+                                each i in iprojects
+                                    a(href='project.html').swiper-slide.iproject
+                                        +image(i.src,'iproject__img')
+                                        span.iproject__content
+                                            span.iproject__title= i.title
+                                            span.iproject__txt= i.txt
+                                            +icon('arrow','iproject__svg')
+
+                        //- pagination
+                        .iprojects__pag
+                            .pag
+        //- popular
+        section.index__popular
+            .ipops
+                .container
+                    //- top
+                    +title('Популярные виды работ','ВСЕ МАТЕРИАЛЫ','works.html','ipops')
+                    //- bottom
+                    .ipops__bottom
+                        .row
+                            each i in ipops
+                                a(href='work.html').ipop
+                                    span.ipop__img
+                                        +image(i.src,'ipop__img-img')
+                                    span.ipop__title= i.title
+                                    span.ipop__bottom
+                                        span.ipop__prices
+                                            span(class=i.priceCls).ipop__price.price= i.price
+                                            if i.priceOld
+                                                span.ipop__priceold.priceold= i.priceOld
+                                        +icon('arrow','ipop__svg')
+        //- reccomended
+        section.index__reccomended
+            +irecom('Стоит приглядеться','ВСЯ ПРОДУКЦИЯ','catalog.html','')
+        //- promo
+        section.index__promo
+            .ipromo
+                .ipromo__img
+                    +image('images/content/index/promo/bg.jpg','ipromo__img-img')
+                    +image('images/content/index/promo/bg-m.jpg','ipromo__img-img ipromo__img-img_m')
+                .ipromo__wrapper
+                    .container.ipromo__container
+                        .ipromo__content
+                            h2.ipromo__title Перфоратор сетевой INGCO
+                            .ipromo__txt
+                                | Успей купить перфоратор
+                                br
+                                | по специальной цене до 31.12.2019
+                            a(href='product.html').btn4.ipromo__link ПОДРОБНЕЕ
+        //- categories
+        section.index__cats
+            .icats
+                .container
+                    //- top
+                    +title('Популярные категории','КАТАЛОГ','catalog.html','icats')
+                    //- bottom
+                    .icats__bottom
+                        .row
+                            each i in icats
+                                +icat(i.title,i.src)
+        //- actions
+        section.index__actions
+            +iactions()
+        //- news
+        section.index__news
+            .inews
+                .container
+                    //- top
+                    +title('Новости и обзоры','ВСЕ МАТЕРИАЛЫ','news.html','inews')
+                    //- bottom
+                    .iactions__bottom
+                        .row
+                            each i in inews
+                                a(href='new.html').inew
+                                    span.inew__img
+                                        +image(i.src,'inew__img-img')
+                                    span.inew__bottom
+                                        span.inew__date= i.date
+                                        span.inew__title= i.title
+                                        span.inew__txt= i.txt
+                                        span.inew__link.link
+                                            span.inew__link-txt.link__txt Подробнее
+                                            +icon('arrow-s','inew__link-svg link__svg')
+
+        //-about
+        section.index__about
+            .iabout
+                .container
+                    .row.iabout__row
+                        //- left
+                        .iabout__left
+                            +image('images/content/index/about/img.jpg','iabout__img')
+
+                        //- right
+                        .iabout__right
+                            .iabout__top
+                                .iabout__bread О КОМПАНИИ
+                                h2.iabout__title
+                                    | Интернет магазин
+                                    br
+                                    | “Стройшоп”
+                            .iabout__content Это новый шаблон от Web-Comp. Здесь всё устроено так, чтобы вам было удобно покупать онлайн: все продавцы проверены, заказы доставляются быстро и когда вам удобно, а на популярные товары всегда можно найти скидки. Наслаждайтесь покупками, наши сотрдуники позаботятся о надёжных поставщиках, удобной доставке и безопасной оплате
+
+                            .iabout__btns
+                                a(href='about.html').btn.iabout__link ПОДРОБНЕЕ
+                                a(href='catalog.html').btn2.iabout__catalog ПЕРЕЙТИ В КАТАЛОГ
+        //- reviews
+        section.index__revs
+            .irevs
+                .container
+                    //- top
+                    +title('Отзывы','ВСЕ ОТЗЫВЫ','reviews.html','irevs')
+                    //- bottom
+                    .irevs__bottom
+                        //- slider
+                        div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').irevs__slider
+                            button(type='button').arrow.irevs__prev
+                                +icon('prev','arrow__svg')
+                            .swiper-container.irevs__container
+                                .swiper-wrapper
+                                    each i in irevs
+                                        a(href='action.html').swiper-slide.irev
+                                            span.irev__img
+                                                span.irev__img-wrap
+                                                    +image(i.src,'irev__img-img')
+                                            span.irev__bottom
+                                                span.irev__title= i.title
+                                                span.irev__prof= i.prof
+                                                span.irev__rating
+                                                    span.rating
+                                                        span.rating__list
+                                                            span.rating__star.active
+                                                                +icon('star','rating__star-svg')
+                                                            span.rating__star.active
+                                                                +icon('star','rating__star-svg')
+                                                            span.rating__star.active
+                                                                +icon('star','rating__star-svg')
+                                                            span.rating__star
+                                                                +icon('star','rating__star-svg')
+                                                            span.rating__star
+                                                                +icon('star','rating__star-svg')
+                                                span.irev__txt Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.
+                                                span.irev__link.link
+                                                    span.inew__link-txt.link__txt Подробнее
+                                                    +icon('arrow-s','inew__link-svg link__svg')
+
+
+                            button(type='button').arrow.irevs__next
+                                +icon('next','arrow__svg')
+                        //- pag
+                        .irevs__pag
+                            .pag
+                        //- btn
+                        button(type='button').irevs__btn.btn.jsAddReview Оставить отзыв
+        //- brands
+        section.index__brands
+            .ibrands
+                .container
+                    //- top
+                    +title('Бренды','БРЕНДЫ','brands.html','ibrands')
+                    //- bottom
+                    .ibrands__bottom
+                        //- slider
+                        div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').ibrands__slider
+                            button(type='button').arrow.ibrands__prev
+                                +icon('prev','arrow__svg')
+                            .swiper-container.ibrands__container
+                                .swiper-wrapper
+                                     each i in [1,2,3,4,5,6]
+                                         a(href='action.html').swiper-slide.ibrand
+                                            +image('images/content/index/brands/'+i+'.png','ibrand__img')
+                            button(type='button').arrow.ibrands__next
+                                +icon('next','arrow__svg')
+                        //- pag
+                        .ibrands__pag
+                            .pag

@@ -1,0 +1,101 @@
+.alert {
+  border: none;
+  border-radius: 1px;
+  font-size: 14px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  color: $main3;
+  background-color: $bg;
+  border-color: $border2;
+}
+
+.alert-warning {
+  color: $warning;
+  background-color: $bg;
+  border-color: $border2;
+}
+
+.alert-danger {
+  color: $validation;
+  background-color: $bg;
+  border-color: $border2;
+}
+
+.back_btn_mobile {
+  display: none;
+  @media (max-width: 991.98px) {
+    .back_btn_mobile {
+      display: block;
+    }
+  }
+}
+
+.bx_filter {
+  margin-bottom: 20px;
+}
+
+.auth_errors {
+  color: $validation;
+}
+
+.popup-render {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: $main1;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $icon;
+  }
+}
+
+.svg__icon {
+  line-height: 0;
+}
+
+.search-page{
+  form {
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    flex-grow: 1;
+    background: $bg;
+    font-size: 18px;
+    color: $headers;
+    background: $bg url(../images/icons/loop.svg) 15px center no-repeat;
+    border: 1px solid $border;
+    border-radius: 4px;
+    padding-left: 45px;
+    height: 40px;
+  }
+
+  input[type="submit"] {
+    flex-grow: 0;
+    width: 115.84px;
+    height: 40px;
+    background: $main1;
+    border-radius: 4px;
+    font-size: 16px;
+    color: $bg;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    @include tr;
+
+    &:hover {
+      background-color: $main2;
+    }
+  }
+
+
+}

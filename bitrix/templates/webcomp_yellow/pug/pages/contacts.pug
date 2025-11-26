@@ -1,0 +1,160 @@
+extends ../main
+
+block variables
+    - var title = 'Контакты'
+    - var main = false
+
+block content
+    main.catalog.contacts
+        .contacts__top
+            .container
+                //- bread
+                .contacts__bread.bread
+                    a(href='/').bread__link
+                        +icon('home','bread__link-svg')
+                    span.bread__link.active
+                        span.bread__link-txt Контакты
+                //- title
+                h1.contacts__title Контакты
+        //- row
+        .contacts__row
+            .container
+                .row
+                    .contacts__col
+                        .contacts__item
+                            .contact
+                                .contact__top
+                                    +icon('pin','contact__svg contact__svg_pin')
+                                    .contact__name АДРЕС
+                                .contact__bottom
+                                    a(href='https://yandex.ru/maps/-/CKqGjE4G').contact__link г. Москва, ул. Нижние поля 31, 4 этаж, офис 26
+                        .contacts__item
+                            .contact
+                                .contact__top
+                                    +icon('metro','contact__svg contact__svg_metro')
+                                    .contact__name СТАНЦИЯ МЕТРО
+                                .contact__bottom
+                                    a(href='https://yandex.ru/maps/-/CKqGjI70').contact__link Марьино
+                    .contacts__col
+                        .contacts__item
+                            .contact
+                                .contact__top
+                                    +icon('date','contact__svg contact__svg_date')
+                                    .contact__name РЕЖИМ РАБОТЫ
+                                .contact__bottom
+                                    .contact__link
+                                        | Пн - Пт: 9.00 - 18.00
+                                        br
+                                        | Сб - Вс: выходные
+                        .contacts__item
+                            .contact
+                                .contact__top
+                                    +icon('email','contact__svg contact__svg_email')
+                                    .contact__name EMAIL
+                                .contact__bottom
+                                    a(href='mailto:stroishop@stroishop.ru').contact__link stroishop@stroishop.ru
+                    .contacts__col
+                        .contacts__item
+                            .contact
+                                .contact__top
+                                    +icon('tel2','contact__svg contact__svg_tel2')
+                                    .contact__name ТЕЛЕФОН
+                                .contact__bottom
+                                    a(href='tel:+70000000000').contact__phone
+                                        span.contact__phone-val +7 000 000-00-00
+                                        span.contact__phone-dept Бухгалтерия
+                                    a(href='tel:+70000000000').contact__phone
+                                        span.contact__phone-val +7 000 000-00-00
+                                        span.contact__phone-dept Отдел продаж
+                                    a(href='tel:+70000000000').contact__phone
+                                        span.contact__phone-val +7 000 000-00-00
+                                        span.contact__phone-dept Менеджер
+                        button(type='button').contacts__btn.btn2.jsQuestion ЗАДАТЬ ВОПРОС
+        .contacts__map
+            #map(data-center-x='55.75968406898679'
+                data-center-y='37.574857499999965'
+                data-zoom = '17'
+                data-baloon-x='55.75968406898679'
+                data-baloon-y='37.574857499999965'
+                data-baloon-header='Матвеева и партнеры'
+                data-baloon-body='Квалифицированная юридическая помощь'
+                data-baloon-footer='Москва, ул. Дружинниковская, 15 (киноцентр на Красной Пресне)'
+                data-baloon-content='advokatmr.ru'
+                data-icon='/images/icons/baloon.svg'
+                data-icon-size-x='47'
+                data-icon-size-y='57'
+                data-icon-offset-x='-23'
+                data-icon-offset-y='-28')
+        .contacts__call
+            .container
+                form.ccall
+                    .ccall__title Заказать звонок
+                    .ccall__row.row
+                        .ccall__col
+                            .ccall__fields
+                                .ccall__field
+                                    input(type='text' name='name' placeholder='Ваше имя*' data-rule-required="true"
+                                        data-msg-required="Введите Имя").ccall__input
+                                .ccall__field
+                                    input(type='tel' name='tel' placeholder='Номер телефона*' data-rule-required="true"
+                                        data-msg-required="Введите телефон" data-msg-tel="Введите телефон").ccall__input
+                                .ccall__field
+                                    input(type='email' name='email' placeholder='Email*' data-rule-required="true"
+                                        data-msg-required="Введите Email").ccall__input
+                        .ccall__col
+                            .ccall__fields
+                                .ccall__field
+                                    textarea(name='message' placeholder='Сообщение').ccall__input.ccall__input_area
+                        .ccall__col.ccall__col_small
+                            .ccall__txt
+                                | Нажимая на кнопку, вы соглашаетесь на обработку персональных данных в соответствии с&nbsp;
+                                a(href='policy.html') Условиями  политики конфиденциальности.
+                            button(type='submit').ccall__submit.btn ОТПРАВИТЬ ЗАПРОС
+        .contacts__bottom
+            .container
+                .row
+                    .contacts__column
+                        .cblock
+                            .cblock__top
+                                .cblock__title Наши реквизиты
+                                +icon('bag','cblock__svg cblock__svg_bag')
+                            .cblock__bottom
+                                .row.cblock__row
+                                    .cblock__col
+                                        | ИНН 9723022394
+                                        br
+                                        | КПП 772301001
+                                        br
+                                        | ОКПО 12261483
+                                        br
+                                        | ОГРН 1177746299917
+                                        br
+                                        | р/с 40702810738000145357
+                                        br
+                                        | ПАО СБЕРБАНК г. Москва
+                                        br
+                                        | к/с 30101810400000000225
+                                        br
+                                        | БИК 044525225
+                                    .cblock__col.cblock__col_g
+                                        | Генеральный директор:
+                                        br
+                                        | Коновалов Петр Игоревич
+                                        br
+                                        | Система налогооблажения:
+                                        br
+                                        | ОСНО (НДС 18%)
+
+                    .contacts__column
+                        .cblock
+                            .cblock__top
+                                .cblock__title Как добраться
+                                +icon('metro','cblock__svg cblock__svg_metro')
+                            .cblock__bottom
+                                .content
+                                    p WebComp: Стройшоп — интернет-магазин строительных инструментов и материалов для себя, дома, офиса и дачи. Здесь вы найдете товары под свои предпочтения: от аудиотехники и одежды до строительных материалов и велосипедов.
+                                    p Работаем с 2005 года, поэтому на личном опыте выявили надежных партнеров. Сотрудничаем с проверенными производителями, чьи товары соответствуют гостам. А также — со службами доставки, которые привозят заказы в срок.
+
+
+
+

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hiblock>
+	<hiblock>
+		<id>5</id>
+		<name>WebCompMarketDelivery</name>
+		<table_name>b_webcomp_market_delivery</table_name>
+	</hiblock>
+	<langs>
+		<lang>
+			<id>5</id>
+			<lid>ru</lid>
+			<name>WebComp.Market: Способы доставки</name>
+		</lang>
+		<lang>
+			<id>5</id>
+			<lid>en</lid>
+			<name>WebComp.Market: Delivery method</name>
+		</lang>
+	</langs>
+	<fields>
+		<field>
+			<id>23</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_ACTIVE</field_name>
+			<user_type_id>boolean</user_type_id>
+			<xml_id>UF_ACTIVE</xml_id>
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<default_value>1</default_value>
+				<display>CHECKBOX</display>
+				<label>
+					<0 />
+					<1 />
+				</label>
+				<label_checkbox />
+			</settings>
+			<edit_form_label>
+				<en>Активность</en>
+				<ru>Активность</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Активность</en>
+				<ru>Активность</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Активность</en>
+				<ru>Активность</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>int</base_type>
+		</field>
+		<field>
+			<id>24</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_SORT</field_name>
+			<user_type_id>integer</user_type_id>
+			<xml_id>UF_SORT</xml_id>
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<min_value>0</min_value>
+				<max_value>0</max_value>
+				<default_value>100</default_value>
+			</settings>
+			<edit_form_label>
+				<en>Сортировка</en>
+				<ru>Сортировка</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Сортировка</en>
+				<ru>Сортировка</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Сортировка</en>
+				<ru>Сортировка</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>int</base_type>
+		</field>
+		<field>
+			<id>25</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_NAME</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id>UF_NAME</xml_id>
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>Y</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<en>Название способа доставки</en>
+				<ru>Название способа доставки</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Название способа доставки</en>
+				<ru>Название способа доставки</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Название способа доставки</en>
+				<ru>Название способа доставки</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>26</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_PRICE</field_name>
+			<user_type_id>double</user_type_id>
+			<xml_id>UF_PRICE</xml_id>
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>Y</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<precision>0</precision>
+				<size>20</size>
+				<min_value>0</min_value>
+				<max_value>0</max_value>
+				<default_value>0</default_value>
+			</settings>
+			<edit_form_label>
+				<en>Стоимость</en>
+				<ru>Стоимость</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Стоимость</en>
+				<ru>Стоимость</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Стоимость</en>
+				<ru>Стоимость</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>double</base_type>
+		</field>
+		<field>
+			<id>27</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_PERIOD_TEXT</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id>UF_PERIOD_TEXT</xml_id>
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>N</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<en>Срок доставки</en>
+				<ru>Срок доставки</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Срок доставки</en>
+				<ru>Срок доставки</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Срок доставки</en>
+				<ru>Срок доставки</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>28</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_DESCRIPTION</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id>UF_DESCRIPTION</xml_id>
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>N</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>40</size>
+				<rows>3</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<en>Описание</en>
+				<ru>Описание</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Описание</en>
+				<ru>Описание</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Описание</en>
+				<ru>Описание</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>29</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_ICON</field_name>
+			<user_type_id>file</user_type_id>
+			<xml_id>UF_ICON</xml_id>
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>N</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<list_width>200</list_width>
+				<list_height>200</list_height>
+				<max_show_size>0</max_show_size>
+				<max_allowed_size>0</max_allowed_size>
+				<extensions />
+			</settings>
+			<edit_form_label>
+				<en>Иконка</en>
+				<ru>Иконка</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Иконка</en>
+				<ru>Иконка</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Иконка</en>
+				<ru>Иконка</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>file</base_type>
+		</field>
+		<field>
+			<id>43</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_PRICE_FOR_USER</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>N</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<en>Отображение стоимости</en>
+				<ru>Отображение стоимости</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Отображение стоимости</en>
+				<ru>Отображение стоимости</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Отображение стоимости</en>
+				<ru>Отображение стоимости</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>44</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_CHECKED</field_name>
+			<user_type_id>boolean</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<default_value>0</default_value>
+				<display>CHECKBOX</display>
+				<label>
+					<0 />
+					<1 />
+				</label>
+				<label_checkbox />
+			</settings>
+			<edit_form_label>
+				<en>Как доставка по умолчанию</en>
+				<ru>Как доставка по умолчанию</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Как доставка по умолчанию</en>
+				<ru>Как доставка по умолчанию</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Как доставка по умолчанию</en>
+				<ru>Как доставка по умолчанию</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>int</base_type>
+		</field>
+		<field>
+			<id>45</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_HIDE_FIELD</field_name>
+			<user_type_id>boolean</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<default_value>0</default_value>
+				<display>CHECKBOX</display>
+				<label>
+					<0 />
+					<1 />
+				</label>
+				<label_checkbox />
+			</settings>
+			<edit_form_label>
+				<en>Скрывать поле &quot;Адрес доставки&quot;</en>
+				<ru>Скрывать поле &quot;Адрес доставки&quot;</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Скрывать поле &quot;Адрес доставки&quot;</en>
+				<ru>Скрывать поле &quot;Адрес доставки&quot;</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en>Скрывать поле &quot;Адрес доставки&quot;</en>
+				<ru>Скрывать поле &quot;Адрес доставки&quot;</ru>
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>int</base_type>
+		</field>
+		<field>
+			<id>63</id>
+			<entity_id>HLBLOCK_5</entity_id>
+			<field_name>UF_PAY_OPTIONS</field_name>
+			<user_type_id>hlblock</user_type_id>
+			<xml_id>UF_PAY_OPTIONS</xml_id>
+			<sort>100</sort>
+			<multiple>Y</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<display>CHECKBOX</display>
+				<list_height>5</list_height>
+				<hlblock_id>4</hlblock_id>
+				<hlfield_id>19</hlfield_id>
+				<default_value>0</default_value>
+				<hlblock_table>b_webcomp_market_payments</hlblock_table>
+			</settings>
+			<edit_form_label>
+				<en />
+				<ru />
+			</edit_form_label>
+			<list_column_label>
+				<en />
+				<ru />
+			</list_column_label>
+			<list_filter_label>
+				<en />
+				<ru />
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>int</base_type>
+		</field>
+	</fields>
+	<items>
+		<item>
+			<id>1</id>
+			<uf_active>1</uf_active>
+			<uf_sort>100</uf_sort>
+			<uf_name>Самовывоз</uf_name>
+			<uf_price>0</uf_price>
+			<uf_period_text>1-2 дн.</uf_period_text>
+			<uf_description>Самовывоз с нашего склада</uf_description>
+			<uf_icon>uf/873/873bcb8e8d8ebaca903e7dfb47e43067.svg</uf_icon>
+			<uf_price_for_user>Бесплатно</uf_price_for_user>
+			<uf_checked>1</uf_checked>
+			<uf_hide_field>1</uf_hide_field>
+			<uf_pay_options>serialize#a:2:{i:1;s:1:&quot;1&quot;;i:2;s:1:&quot;2&quot;;}</uf_pay_options>
+		</item>
+		<item>
+			<id>2</id>
+			<uf_active>1</uf_active>
+			<uf_sort>100</uf_sort>
+			<uf_name>Доставка в пределах МКАД</uf_name>
+			<uf_price>500</uf_price>
+			<uf_period_text>1-2 дн.</uf_period_text>
+			<uf_description>Малогабаритный товар массой до 3 кг</uf_description>
+			<uf_icon>uf/c90/c90b526fa7ffca4d00f867406efb8459.svg</uf_icon>
+			<uf_price_for_user>от 500 руб.</uf_price_for_user>
+			<uf_checked>0</uf_checked>
+			<uf_hide_field>0</uf_hide_field>
+			<uf_pay_options>serialize#a:1:{i:1;s:1:&quot;1&quot;;}</uf_pay_options>
+		</item>
+		<item>
+			<id>3</id>
+			<uf_active>1</uf_active>
+			<uf_sort>100</uf_sort>
+			<uf_name>Доставка за МКАД</uf_name>
+			<uf_price>800</uf_price>
+			<uf_period_text>1-2 дн.</uf_period_text>
+			<uf_description>Доставка за МКАД, рассчитывается отдельно</uf_description>
+			<uf_icon>uf/5c6/5c6f8ec84c2fd903e0eacdfcbbdcc49f.svg</uf_icon>
+			<uf_price_for_user>от 800 руб.</uf_price_for_user>
+			<uf_checked>0</uf_checked>
+			<uf_hide_field>0</uf_hide_field>
+			<uf_pay_options>serialize#a:2:{i:1;s:1:&quot;2&quot;;i:2;s:1:&quot;3&quot;;}</uf_pay_options>
+		</item>
+	</items>
+</hiblock>

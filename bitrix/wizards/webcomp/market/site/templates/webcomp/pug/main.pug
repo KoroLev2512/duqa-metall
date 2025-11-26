@@ -1,0 +1,469 @@
+include common/_mixins
+include common/_settings
+block variables
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+
+        title Portfolio | #{title}
+        link(rel='stylesheet' href='css/vendor.min.css')
+        link(rel='stylesheet' href='css/main.css')
+        // Для изменений после верстки
+        link(rel='stylesheet' href='css/custom.css')
+
+        link(rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png")
+        link(rel="manifest" href="images/favicon/site.webmanifest")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+    body
+        .wrapper
+            //- heeader
+            header(class=main ? '' : 'header_second').header
+                //- top
+                .header__top
+                    .container
+                        .header__top-row
+                            //- left
+                            .header__top-left
+                                //- city
+                                //button(type='button').header__city Москва
+
+                            //- right
+                            .header__top-right
+                                .header__controls
+                                    a(href='#').header__control.jsSearch
+                                        +icon('magnifier','header__control-svg')
+                                        span.header__control-txt Поиск
+
+                                    a(href='cabinet.html').header__control
+                                        +icon('cabinet','header__control-svg')
+                                        span.header__control-txt Войти
+
+
+                //- middle
+                .header__middle
+                    .container
+                        .header__middle-row.row
+                            //- left
+                            .header__middle-left
+                                //- mmenu-btn
+                                .header__mmenu
+                                    button(type='button').mmenu-btn.jsMenuOpen
+                                        +icon('menu', 'mmenu-btn__svg')
+                                //- logo
+                                .header__logo
+                                    +logo('header__logo-img')
+                                    .header__logo-txt
+                                        | Лучшие товары
+                                        br
+                                        | по лучшим
+                                        | ценам
+
+                            //- right
+                            .header__middle-right
+                                //- info
+                                .header__info
+                                    .worktime
+                                        .worktime__left
+                                            +icon('time','worktime__svg')
+                                        .worktime__right
+                                            .worktime__title График работы:
+                                            .worktime__txt 09:00 - 18:00
+
+                                //- links
+                                .header__links
+                                    a(href='mailto:info@web-comp').header__link
+                                        +icon('email','header__link-svg')
+                                        span.header__link-txt info@web-comp
+                                    a(href='https://yandex.ru/maps/-/CKEMaK--').header__link
+                                        +icon('pin','header__link-svg')
+                                        span.header__link-txt г.Москва, ул.Нижние поля дом 31
+
+
+                                //- phones
+                                .header__phones
+                                    +phone('header__phone')
+                                    button(type='button').header__call.jsCall.jsOpenForm Заказать звонок
+
+                //- bottom
+                .header__bottom
+                    .container
+                        .header__bottom-row
+                            +menu(main ? 'header__menu' : 'menu_white header__menu')
+
+            //- pages
+            div(class=main ? '' : 'page_second').page
+                block content
+
+            //- footer
+            footer.footer
+                //- feed
+                form.footer__feed.ffeed
+                    .container
+                        .row.ffeed__row
+                            //- left
+                            .ffeed__left
+                                .ffeed__title Укажите свое имя и контактный номер и мы свами свяжемся
+
+                            //- right
+                            .ffeed__right
+                                .row
+                                    .ffeed__field
+                                        input(type='text' name='name' placeholder='Имя' data-rule-required="true"
+                                            data-msg-required="Введите Имя").ffeed__input
+                                    .ffeed__field
+                                        input(type='tel' name='tel' placeholder='+7(__) ___-__-__' data-rule-required="true"
+                                            data-msg-required="Введите телефон" data-msg-tel="Введите ваш телефон").ffeed__input
+                                    .ffeed__field
+                                        button(type='submit').btn2.btn2_w.ffeed__submit заказать звонок
+
+                                    .ffeed__policy
+                                        | Заполняя данную форму Вы соглашаетесь с&nbsp;
+                                        a(href='policy.html') Политикой обработки персональных данных
+                //- top
+                .footer__top
+                    .container
+                        .row.footer__top-row
+                            each col in footerMenu
+                                .footer__col
+                                    a(href=col.title.href).footer__title= col.title.title
+                                    .footer__list
+                                        each i in col.list
+                                            a(href=i.href).footer__item= i.title
+                                    if col.socials
+                                        .footer__socials-t
+                                            .socials
+                                                .socials__title Мы в соц. сетях
+                                                .socials__list
+                                                    each row in footerSocials
+                                                        .socials__row
+                                                            each i in row
+                                                                a(href=i.href).socials__item
+                                                                    +icon(i.svg,'socials__item-svg')
+
+
+
+                            .footer__col.footer__col_right
+                                .row
+                                    .footer__contacts
+                                        a(href='contacts.html').footer__contacts-title Контакты
+                                        a(href='tel:+7(000)000-00-00').footer__contact +7 000 000-00-00
+                                        a(href='mailto:info@web-comp').footer__contact info@web-comp
+                                        a(href='https://yandex.ru/maps/-/CKEMaK--').footer__contact г.Москва, ул. Пушкина 19
+
+                                    .footer__socials
+                                        .socials
+                                            .socials__title Мы в соц. сетях
+                                            .socials__list
+                                                each row in footerSocials
+                                                    .socials__row
+                                                        each i in row
+                                                            a(href=i.href).socials__item
+                                                                +icon(i.svg,'socials__item-svg')
+
+
+
+                //- bottom
+                .footer__bottom
+                    .container
+                        .footer__bottom-row
+                            .footer__copy 2020 © Название вашей компании
+                            a(href='https://web-comp.ru/').footer__developer.developer
+                                span.developer__txt Cоздание и продвижение сайтов
+                                +image('images/icons/developer.png','developer__img')
+
+
+
+        .debug
+            div
+                div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+
+
+
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+        script(src='js/vendor.min.js')
+        script(src='js/main.min.js' async=true)
+        // Для изменений после верстки
+        script(src='js/custom.js')
+        //- scrollTop
+        .scroll
+            .container
+                .scroll__wrap
+                    button(type='button').scroll__btn
+                        +icon('arr-top','scroll__btn-svg')
+
+        //- fixed menu
+        .fixmenu
+            .container
+                .fixmenu__row.row
+                    //- mmenu-btn
+                    .fixmenu__mmenu
+                        button(type='button').mmenu-btn.jsMenuOpen
+                            +icon('menu', 'mmenu-btn__svg')
+                    //- logo
+                    .fixmenu__logo
+                        +logo()
+
+                    //- menu
+                    .fixmenu__menu
+                        +menu('menu_small menu_white', true)
+
+                    //- controls
+                    .fixmenu__controls.header__controls
+                        a(href='#').header__control.jsSearch.header__control_black
+                            +icon('magnifier','header__control-svg')
+                        a(href='cabinet.html').header__control.header__control_black
+                            +icon('cabinet','header__control-svg')
+
+
+
+                    //- phones
+                    .fixmenu__phones
+                        .fixmenu__phones-wrap
+                            +phone('header__phone')
+                            button(type='button').header__call.jsCall.jsOpenForm Заказать звонок
+        //- popup
+        .popup
+            //- bg
+            .popup__bg
+            //- btns
+            .popup__btns
+                button(type='button' data-ajax='ajax.php' data-action='cart').popup__btn.jsCartForm
+                    span.popup__btn-img
+                        +icon('cart','popup__btn-svg popup__btn-svg_cart')
+                        span.popup__btn-count 3
+                button(type='button' data-ajax='ajax.php' data-action='favorite').popup__btn.jsFavoriteForm
+                    span.popup__btn-img
+                        +icon('heart','popup__btn-svg popup__btn-svg_heart')
+                        span.popup__btn-count 2
+                a(href='compare.html').popup__btn
+                    span.popup__btn-img
+                        +icon('compare','popup__btn-svg popup__btn-svg_compare')
+                        span.popup__btn-count 0
+                button(type='button' data-ajax='ajax.php' data-action='callback').popup__btn.popup__btn_t.jsCall
+                    span.popup__btn-img
+                        +icon('tel','popup__btn-svg popup__btn-svg_tel')
+                button(type='button' data-ajax='ajax.php' data-action='review').popup__btn.popup__btn_t.jsReview
+                    span.popup__btn-img
+                        +icon('review','popup__btn-svg popup__btn-svg_review')
+                button(type='button' data-ajax='ajax.php' data-action='question').popup__btn.popup__btn_t.jsQuestion
+                    span.popup__btn-img
+                        +icon('callback','popup__btn-svg popup__btn-svg_callback')
+
+            //- tabs
+            .popup__tabs
+                .popup__tab
+
+        //- mmenu
+        .mmenu
+            .mmenu__main
+                .mmenu__top
+                    //- left
+                    .mmenu__top-left
+                        button(type='button').mmenu__title.jsMenuClose
+                            +icon('arrow-s-left','mmenu__title-svg')
+                            span.mmenu__title-title Меню
+
+                    //- right
+                    .mmenu__top-right
+                        a(href='cabinet.html').mmenu__enter
+                            +icon('cabinet', 'mmenu__enter-svg')
+                            span.mmenu__enter-txt Войти
+                        button(type='button').mmenu__search
+                            +icon('magnifier','mmenu__search-svg')
+
+                .mmenu__bottom
+                    //- controls
+                    .mmenu__controls.mcontrols
+                        a(href='cart.html').mcontrol
+                            +icon('cart','mcontrol__svg mcontrol__svg_cart')
+                            span.mcontrol__count 3
+                        a(href='favorite.html').mcontrol
+                            +icon('heart','mcontrol__svg mcontrol__svg_heart')
+                            span.mcontrol__count 8
+                        a(href='compare.html').mcontrol
+                            +icon('compare','mcontrol__svg mcontrol__svg_compare')
+                            span.mcontrol__count 0
+
+
+                    //- list
+                    .mmenu__list
+                        each i in menu
+                            .mitem
+                                a(href=i.href class=i.arrow ? 'mitem__link_arr' : '').mitem__link= i.title
+                                if i.arrow
+                                    .mmenu__wrapper
+                                        .mmenu__top
+                                            //- left
+                                            .mmenu__top-left
+                                                button(type='button').mmenu__title.jsWrapClose
+                                                    +icon('arrow-s-left','mmenu__title-svg')
+                                                    span.mmenu__title-title= i.title
+
+                                            //- right
+                                            .mmenu__top-right
+                                                button(type='button').mmenu__close.jsMenuClose
+                                                    +icon('close', 'mmenu__close-svg')
+
+                                        .mmenu__bottom
+                                            .mmenu__list
+                                                .mitem
+                                                    a(href='category.html').mitem__link.mitem__link_b Перейти в раздел
+                                                if i.submenu
+                                                    each j in i.submenu
+                                                        .mitem
+                                                            a(href='category.html').mitem__link.mitem__link_arr= j
+                                                            .mmenu__wrapper
+                                                                .mmenu__top
+                                                                    //- left
+                                                                    .mmenu__top-left
+                                                                        button(type='button').mmenu__title.jsWrapClose
+                                                                            +icon('arrow-s-left','mmenu__title-svg')
+                                                                            span.mmenu__title-title= j
+
+                                                                    //- right
+                                                                    .mmenu__top-right
+                                                                        button(type='button').mmenu__close.jsMenuClose
+                                                                            +icon('close', 'mmenu__close-svg')
+
+                                                                .mmenu__bottom
+                                                                    .mmenu__list
+                                                                        .mitem
+                                                                            a(href='category.html').mitem__link.mitem__link_b Перейти в раздел
+                                                                        .mitem
+                                                                            a(href='category.html').mitem__link Подкатегория
+                                                if i.submenu2
+                                                    each j in [1,2,3,4,5,6,7,8]
+                                                        .mitem
+                                                            a(href='category.html').mitem__link.mitem__link_arr Мобильные устройства
+                                                            .mmenu__wrapper
+                                                                .mmenu__top
+                                                                    //- left
+                                                                    .mmenu__top-left
+                                                                        button(type='button').mmenu__title.jsWrapClose
+                                                                            +icon('arrow-s-left','mmenu__title-svg')
+                                                                            span.mmenu__title-title Категория
+
+                                                                    //- right
+                                                                    .mmenu__top-right
+                                                                        button(type='button').mmenu__close.jsMenuClose
+                                                                            +icon('close', 'mmenu__close-svg')
+
+                                                                .mmenu__bottom
+                                                                    .mmenu__list
+                                                                        .mitem
+                                                                            a(href='category.html').mitem__link.mitem__link_b Перейти в раздел
+                                                                        .mitem
+                                                                            a(href='').mitem__link Подкатегория
+                        .mitem
+                            a(href='tel:+7(495)111-11-11').mitem__link.mitem__link_phone.mitem__link_arr
+                                span.mitem__phone
+                                    +icon('phone','mitem__phone-svg')
+                                    span.mitem__phone-wrap
+                                        span.mitem__phone-phone +7 (495) 111-11-11
+                                        span.mitem__phone-txt Отдел продаж
+                            .mmenu__wrapper
+                                .mmenu__top
+                                    //- left
+                                    .mmenu__top-left
+                                        button(type='button').mmenu__title.jsWrapClose
+                                            +icon('arrow-s-left','mmenu__title-svg')
+                                            span.mmenu__title-title Телефоны
+
+                                    //- right
+                                    .mmenu__top-right
+                                        button(type='button').mmenu__close.jsMenuClose
+                                            +icon('close', 'mmenu__close-svg')
+
+                                .mmenu__bottom
+                                    .mmenu__list
+                                        .mitem
+                                            a(href='tel:+7(495)111-11-11').mitem__link.mitem__link_phone.mitem__link_arr
+                                                span.mitem__phone
+                                                    span.mitem__phone-wrap
+                                                        span.mitem__phone-phone +7 (495) 111-11-11
+                                                        span.mitem__phone-txt Отдел продаж
+                                        .mitem
+                                            a(href='tel:+7(495)111-11-11').mitem__link.mitem__link_phone.mitem__link_arr
+                                                span.mitem__phone
+                                                    span.mitem__phone-wrap
+                                                        span.mitem__phone-phone +7 (495) 111-11-11
+                                                        span.mitem__phone-txt Отдел продаж
+
+
+
+
+
+                        .mitem
+                            a(href='tel:+7(495)111-11-11').mitem__link.jsCall
+                                span.mitem__link-img
+                                    +icon('tel','mitem__link-svg mitem__link-svg_tel')
+                                span.mitem__link-txt Заказать звонок
+                        .mitem
+                            a(href='tel:+7(495)111-11-11').mitem__link.jsReview
+                                span.mitem__link-img
+                                    +icon('review','mitem__link-svg mitem__link-svg_review')
+                                span.mitem__link-txt Оставить отзыв
+                        .mitem
+                            a(href='tel:+7(495)111-11-11').mitem__link.jsQuestion
+                                span.mitem__link-img
+                                    +icon('callback','mitem__link-svg mitem__link-svg_callback')
+                                span.mitem__link-txt Задать вопрос
+
+                    //- contacts
+                    .mmenu__contacts
+                        a(href='mailto:info@web-comp').header__link
+                            +icon('email','header__link-svg')
+                            span.header__link-txt info@web-comp
+                        a(href='https://yandex.ru/maps/-/CKEMaK--').header__link
+                            +icon('pin','header__link-svg')
+                            span.header__link-txt г.Москва, ул.Нижние поля дом 31
+
+
+
+        //- search
+        form(action='ajax.php' method='post').hsearch
+            input(type='hidden' name='action' value='search')
+            //- top
+            .hsearch__top
+                .container
+                    .hsearch__field
+                        input(type='search' name='search' placeholder='Поиск' autocomplete=false).hsearch__input
+                        button(type='submit').hsearch__submit.btn Найти
+                        button(type='button').hsearch__close.jsSearchClose
+                            +icon('close','hsearch__close-svg')
+            .hsearch__bottom
+                .container.hsearch__html
+        //- templates
+        template#tmpl
+            .loader
+                .loader__wrap
+                    .inner.one
+                    .inner.two
+                    .inner.three

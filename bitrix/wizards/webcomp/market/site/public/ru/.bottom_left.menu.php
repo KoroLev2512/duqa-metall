@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+    array(
+        "О компании",
+        "#WIZARD_SITE_DIR#company/",
+        array(),
+        array(),
+        "",
+    ),
+    array(
+        "Новости",
+        "#WIZARD_SITE_DIR#company/news/",
+        array(),
+        array(),
+        "",
+    ),
+    array(
+        "Акции",
+        "#WIZARD_SITE_DIR#company/offers/",
+        array(),
+        array(),
+        "",
+    ),
+    array(
+        "Отзывы",
+        "#WIZARD_SITE_DIR#company/reviews/",
+        array(),
+        array(),
+        "",
+    ),
+    array(
+        "Контакты",
+        "#WIZARD_SITE_DIR#company/contacts/",
+        array(),
+        array(),
+        "",
+    ),
+);
+?>

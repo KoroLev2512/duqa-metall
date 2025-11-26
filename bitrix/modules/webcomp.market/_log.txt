@@ -1,0 +1,16 @@
+[07-06-2022 16:21:04] Ошибка подключения файла /bitrix/templates/webcomp_yellow/images/icons/header_phones.svg - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketView.php:158
+[07-06-2022 16:21:11] Ошибка подключения файла /bitrix/templates/webcomp_yellow/images/icons/header_phones.svg - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketView.php:158
+[07-06-2022 16:21:12] Ошибка подключения файла /bitrix/templates/webcomp_yellow/images/icons/phones.svg - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketView.php:158
+[07-06-2022 16:21:13] Ошибка подключения файла /bitrix/templates/webcomp_yellow/images/icons/phones.svg - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketView.php:158
+[07-06-2022 16:21:17] Ошибка подключения файла /bitrix/templates/webcomp_yellow/images/icons/phones.svg - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketView.php:158
+[03-08-2022 11:45:53] Ошибка подключения файла /bitrix/templates/webcomp_yellow/images/icons/cat-table.svg - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketView.php:158
+[13-03-2023 15:40:09] Ошибка добавление элемента в инфоблок ID = 4 - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159
+[14-03-2023 14:11:53] Ошибка добавление элемента в инфоблок ID = 4 - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159
+[15-03-2023 11:46:24] Ошибка добавление элемента в инфоблок ID = 4 - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159
+[17-03-2023 01:06:15] Ошибка добавление элемента в инфоблок ID = 4 - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159
+[17-03-2023 23:56:33] Ошибка добавление элемента в инфоблок ID = 4 - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159
+[19-03-2023 12:45:55] Ошибка добавление элемента в инфоблок ID = 4 - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159
+[20-03-2023 11:49:25] Ошибка добавление элемента в инфоблок ID = 4 - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159
+[22-03-2023 14:17:13] Ошибка добавление элемента в инфоблок ID = 4 - /home/bitrix/www/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159
+[26-08-2025 12:23:46] Ошибка добавление элемента в инфоблок ID = 6 - /home/c/ca97123/public_html/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159
+[26-08-2025 12:25:05] Ошибка добавление элемента в инфоблок ID = 6 - /home/c/ca97123/public_html/bitrix/modules/webcomp.market/classes/general/CMarketForm.php:159

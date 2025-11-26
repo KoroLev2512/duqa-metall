@@ -1,0 +1,86 @@
+extends ../main
+
+block variables
+    - var title = 'Личный счет'
+    - var main = false
+
+block content
+    .cabinet.orders.account
+        .container
+            .row
+                //- left
+                aside.left
+                    //- menu
+                    .catalog__menu
+                        +amenu3()
+
+                    //- consult
+                    .catalog__consult
+                        .catalog__consult-top
+                            .catalog__consult-image
+                                +image('images/content/catalog/img.svg','catalog__consult-img')
+                            .catalog__consult-title Нужна консультация?
+                            .catalog__consult-txt Наши специалисты ответят на любой интересующий вопрос
+                        button(type='button').catalog__consult-btn.jsQuestion ЗАДАТЬ ВОПРОС
+
+                    //- banner
+                    a(href='category.html').catalog__banner
+                        span.catalog__banner-image
+                            +image('images/content/catalog/img2.jpg','catalog__banner-img')
+                        span.catalog__banner-title Строиматериалы оптом
+
+                //- right
+                main.right
+                    //- bread
+                    .catalog__bread.bread.right__bread
+                        a(href='/').bread__link
+                            +icon('home','bread__link-svg')
+                        a(href='cabinet.html').bread__link
+                            span.bread__link-txt Личный кабинет
+                        span.bread__link.active
+                            span.bread__link-txt Личный счет
+                    //- title
+                    h1.orders__title.account__title Личный счет
+
+                    //- main
+                    .account__main
+                        .account__top
+                            .account__status
+                                .account__status-txt Состояние счета на 24.03.2020
+                                .account__status-price 0 руб.
+                        .account__bottom
+                            //- title
+                            .account__bottom-title Пополнение счета
+                            //- payments
+                            .account__payments
+                                .accpayments
+                                    .accpayments__title Фиксированный платёж
+                                    .accpayments__list
+                                        each i in [100,200,500,1000,5000]
+                                            a(href='/').accpayments__item= i
+                                    .accpayments__sub Сумма
+                                    input(type='text' name='pay' value='0').accpayments__input
+
+
+                            //- types
+                            .account__types.acctypes
+                                .acctypes__title Метод оплаты
+                                .acctypes__list
+                                    each i in payMethods
+                                        label.acctypes__item.acctype
+                                            input(type='radio' name='type' value=i.icon).acctype__input
+                                            span.acctype__row
+                                                span.acctype__block
+                                                    +image('images/content/cabinet/pay/' + i.icon + '.png','acctype__img')
+                                                    span.acctype__check
+                                                        +icon('check2','acctype__check-svg')
+                                                span.acctype__name= i.name
+                            //- btns
+                            .account__btns
+                                a(href='/').orders__back.account__back
+                                    +icon('arrow-s-left','orders__back-svg')
+                                    .orders__back-txt Вернуться к покупкам
+                                a(href='/').btn.account__pay Пополнить счет
+
+
+

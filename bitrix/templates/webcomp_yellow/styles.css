@@ -1,0 +1,21 @@
+/* По умолчанию: десктоп показывает кнопку, мобильную ссылку скрываем */
+.d-desktop { display: inline-flex; align-items: center; }
+.d-mobile  { display: none; }
+
+/* На мобильных: показываем tel-ссылку, скрываем кнопку */
+@media (max-width: 767.98px) {
+  .d-desktop { display: none !important; }
+  .d-mobile  { 
+    display: inline-flex !important; 
+    align-items: center; 
+    transform: translateX(-10px) translateY(-4px); /* смещение иконки влево на 8px */
+  }
+}
+
+/* Мелкие улучшения кликабельности */
+.header__phones .phones__icon { text-decoration: none; }
+.header__phones img.phones__icon-img { display: block; }
+
+/* На случай наложений: гарантируем клики по иконке */
+.header__phones { position: relative; }
+.header__phones .phones__icon { position: relative; z-index: 1; }

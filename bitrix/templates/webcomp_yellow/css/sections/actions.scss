@@ -1,0 +1,141 @@
+.actions {
+  &__item {
+    @include col;
+    @include size(8);
+    margin-bottom: 20px;
+    @include size-sm(12);
+
+    .iaction {
+      @include sm-block {
+        color: $black;
+      }
+
+      &__bottom {
+        background: $bg;
+      }
+    }
+  }
+}
+
+.action {
+  padding-top: 0;
+
+  &__banner {
+    margin-bottom: 0;
+    @include md-block {
+      margin-bottom: 15px;
+    }
+  }
+
+}
+
+.abanner {
+  position: relative;
+
+  &__img {
+    height: 450px;
+    @include md-block {
+      height: 300px;
+    }
+    @include sm-block {
+      height: 220px;
+    }
+
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include sm-block {
+      position: static;
+      background: $bg2;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__row {
+    align-items: center;
+    height: 100%;
+  }
+
+  &__content {
+    @include col;
+    @include size(12);
+    @include size-sm(24);
+    @include sm-block {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    color: $headers;
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    @include md-block {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      font-size: 20px;
+    }
+  }
+
+  &__txt {
+    color: $headers;
+    font-size: 24px;
+    margin-bottom: 20px;
+    @include md-block {
+      font-size: 16px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    @include sm-block {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    margin-right: 20px;
+    font-size: 18px;
+    width: 195px;
+    text-transform: none;
+    @include md-block {
+      width: 157px;
+    }
+    @include sm-block {
+      width: 145px;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    width: 187px;
+    font-size: 18px;
+    text-transform: none;
+    @include md-block {
+      width: 157px;
+    }
+    @include sm-block {
+      width: 145px;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,266 @@
+extends ../main
+
+block variables
+    - var title = 'Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671'
+    - var main = false
+
+block content
+    .product.catalog
+        .container
+            .row
+                //- left
+                aside.catalog__left.left
+                    //- menu
+                    .catalog__menu
+                        +amenu(asideMenu,asideMenu2)
+
+
+                    //- consult
+                    .catalog__consult
+                        .catalog__consult-top
+                            .catalog__consult-image
+                                +image('images/content/catalog/img.svg','catalog__consult-img')
+                            .catalog__consult-title Нужна консультация?
+                            .catalog__consult-txt Наши специалисты ответят на любой интересующий вопрос
+                        button(type='button').catalog__consult-btn.jsQuestion ЗАДАТЬ ВОПРОС
+
+                    //- banner
+                    a(href='category.html').catalog__banner
+                        span.catalog__banner-image
+                            +image('images/content/catalog/img2.jpg','catalog__banner-img')
+                        span.catalog__banner-title Строиматериалы оптом
+
+                //- right
+                main.catalog__right.right
+                    //- bread
+                    .catalog__bread.bread.right__bread
+                        a(href='/').bread__link
+                            +icon('home','bread__link-svg')
+                        a(href='catalog.html').bread__link
+                            span.bread__link-txt Каталог
+                        a(href='category.html').bread__link
+                            span.bread__link-txt Инструменты
+                        span.bread__link.active
+                            span.bread__link-txt Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671 Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671
+
+                    //- title
+                    h1.catalog__title.right__title Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671
+
+                    //- main
+                    .product__main
+                        .row
+                            //- left
+                            .product__left
+                                //- sliders
+                                .product__sliders
+                                    //- slider
+                                    .product__slider
+                                        .swiper-container.pslider
+                                            .swiper-wrapper
+                                                each i in [1,2,3,4,5,6]
+                                                    .swiper-slide.pslide
+                                                        .pslide__img
+                                                            +image('images/content/product/' + i + '.jpg','pslide__img-img')
+                                        //- nav
+                                        .product__nav
+                                            button(type='button').product__prev.product__arr
+                                                +icon('arr-l','product__arr-svg')
+                                            button(type='button').product__next.product__arr
+                                                +icon('arr-r','product__arr-svg')
+                                        //- controls
+                                        .product__controls
+                                            button(type='button').product__control.jsCompare
+                                                +icon('compare','product__control-svg product__control-svg_compare')
+                                            button(type='button').product__control.jsFavorite
+                                                +icon('heart','product__control-svg product__control-svg_heart')
+                                    //- thumbs
+                                    .product__thumbs
+                                        .swiper-container.pthumbs
+                                            .swiper-wrapper
+                                                each i in [1,2,3,4,5,6]
+                                                    .swiper-slide.pthumb
+                                                        .pthumb__img
+                                                            +image('images/content/product/' + i + '.jpg','pthumb__img-img')
+
+                            //- right
+                            .product__right
+                                //- sticks
+                                .product__sticks
+                                    +sticks()
+                                //- prices
+                                .product__prices
+                                    .product__price
+                                        .product__price-val 7 000 РУБ.
+                                        .product__price-avaible.item__avaible
+                                            span.product__avaible__round.item__avaible__round
+                                            span.product__avaible__txt.item__avaible__txt В наличии
+                                    .product__oldprice 65 000 руб.
+                                    .product__prices-info Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах
+
+                                //- info
+                                .product__info
+                                    .product__info-articul Артикул: 7966453е6
+                                    .product__info-top
+                                        .product__rating
+                                            span.rating
+                                                span.rating__list
+                                                    span.rating__star.active
+                                                        +icon('star','rating__star-svg')
+                                                    span.rating__star.active
+                                                        +icon('star','rating__star-svg')
+                                                    span.rating__star.active
+                                                        +icon('star','rating__star-svg')
+                                                    span.rating__star
+                                                        +icon('star','rating__star-svg')
+                                                    span.rating__star
+                                                        +icon('star','rating__star-svg')
+                                                span.rating__count (3)
+
+                                        a(href='brand.html').product__brand
+                                            +image('images/content/product/brand.png','product__brand-img')
+                                    .product__info-txt
+                                        | Функция «сверление»; крутящий момент: 17Н*м; скоростей: 1; основной патрон: быстрозажимной; батарея: Li-Ion; напряжение: 12В; вес: 1кг
+                                //- btns
+                                .product__btns
+                                    .product__add
+                                        .product__count
+                                            .count.count_product
+                                                button(type='button').citem__count-minus.count__minus.count__btn -
+                                                input(type='number' min='1' value='1' step='1' max='999').citem__count-input.count__input
+                                                button(type='button').citem__count-plus.count__plus.count__btn +
+                                        button(type='button').jsAdd.add.product__buy.add_product
+                                            +icon('check','add__svg')
+                                            span.add__txt ДОБАВИТЬ В КОРЗИНУ
+                                            span.add__txt2 ТОВАР В КОРЗИНЕ
+                                            +icon('cart','add__mobile')
+                                    button(type='button').product__one.btn3.jsOne
+                                        +icon('one','btn3__svg')
+                                        span.btn3__txt Купить в 1 клик
+
+                        //- desc
+                        .product__sections
+                            //- description
+                            .product__section
+                                .product__section-title Описание
+                                .product__section-content.content
+                                    p.
+                                        Купить Дрель-шуруповерт KOLNER KCD 12L в интернет-магазине Ситилинк по доступной цене. Дрель-шуруповерт KOLNER KCD 12L: характеристики, описание, фотографии, отзывы покупателей, сопутствующие товары.
+                                    p.
+                                        Это устройство на базе операционной системы Android 5.1 имеет сенсорный дисплей 5,5 Multi-touch, аккумулятор, обеспечивающий длительную работу без подзарядки.
+                                        Пользоваться он-лайн кассой «АЗУР-01Ф» не сложнее, чем обычным смартфоном. Банковский терминал принимает любые виды безналичных оплат: карты с магнитными полосами, смарт-карты, а так же бесконтактные NFC платежи.
+                                    p.
+                                        Встроенный image-сканер штрих-кода может считывать как одномерные 1D, так и двухмерный 2D код.
+                                    p.
+                                        Аккумулятор повышенной емкости, малые габариты и возможность передачи данных через GPRS или Wi-Fi делают «АЗУР-01Ф» незаменимым для выездной торговли.
+                                        В комплектацию входит терминал, аккумулятор, блок питания, инструкция по подключению и настройке.
+                                        ККТ включена в Реестр Приказом ФНС России № ЕД-7-20/85@ от 12.02.2018.
+                                    .yt
+                                        iframe(src="https://www.youtube.com/embed/lhOWb_CZeZQ")
+
+                            //- chars
+                            .product__section
+                                .product__section-title Характеристики
+                                .product__section-content.content
+                                    table
+                                        tbody
+                                            each tr in productChars
+                                                tr
+                                                    each td in tr
+                                                        td= td
+                            //- docs
+                            .product__section
+                                .product__section-title Документация
+                                .product__section-content
+                                    .product__docs
+                                        +pdoc()
+                            //- gallery
+                            .product__section
+                                .product__section-title Галерея
+                                .product__section-content
+                                    //- gallery
+                                    .product__gallery.pgallery
+                                        //- prev
+                                        button(type='button').pgallery__prev.pgallery__arr
+                                            +icon('arr-l','pgallery__arr-svg')
+                                        //- slider
+                                        .swiper-container.pgallery__container
+                                            .swiper-wrapper
+                                                each i in [1,2,3,4,5,6,7,8]
+                                                    .swiper-slide.pgallery__item
+                                                        .pgallery__img
+                                                            +image('images/content/product/img' + i + '.jpg','pgallery__img-img')
+                                        //- next
+                                        button(type='button').pgallery__next.pgallery__arr
+                                            +icon('arr-r','pgallery__arr-svg')
+                                    //- thumbs
+                                    .product__thumbs2
+                                        .swiper-container.pthumbs2
+                                            .swiper-wrapper
+                                                each i in [1,2,3,4,5,6,7,8]
+                                                    .swiper-slide.pthumb2
+                                                        .pthumb2__img
+                                                            +image('images/content/product/img' + i + '.jpg','pthumb__img-img')
+                            //- rev
+                            .product__section
+                                .product__section-title Отзывы о товаре
+                                .product__section-content
+                                    .product__revs
+                                        .revs
+                                            .revs__txt Оставляя отзыв о данном товаре, вы помогаете другим пользователям быстрее и увереннее делать свой выбор. Мы благодарим Вас за активность на нашем сайте.
+                                            button(type='button' data-ajax='ajax.php' data-id='286').revs__btn.btn.jsReviewProduct Оставить отзыв
+                                            .revs__list
+                                                each i in [1,2,3]
+                                                    .rev
+                                                        .rev__left
+                                                            .rev__img
+                                                                .rev__img-wrap
+                                                                    +image('images/content/product/rev1.jpg','rev__img-img')
+                                                        .rev__right
+                                                            // -date
+                                                            .rev__date 18.12.2019
+                                                            //- top
+                                                            .rev__top
+
+                                                                .rev__top-wrap
+                                                                    .rev__left.rev__left_m
+                                                                        .rev__img
+                                                                            .rev__img-wrap
+                                                                                +image('images/content/product/rev1.jpg','rev__img-img')
+
+                                                                    .rev__top-block
+                                                                        //- left
+                                                                        .rev__top-left
+                                                                            .rev__name Александр Баженов
+                                                                            .rev__prof Генеральный директор ООО “Техно - Дом”
+                                                                        //- right
+                                                                        .rev__top-right
+                                                                            .rev__rating
+                                                                                +rating()
+
+                                                            //- txt
+                                                            .rev__txt Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка. Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Переведено с английского языка.-Текст-заполнитель - это текст, который имеет некоторые характеристики реального письменного текста, но является случайным или генерируемым иным образом. Он может использоваться для отображения образца шрифтов, создания текста для тестирования или для подделки фильтра нежелательной почты.
+                                                            .rev__hidden
+                                                                //- imgs
+                                                                .rev__imgs
+                                                                    each j in [1,2,3,4]
+                                                                        .rev__image
+                                                                            a(href='images/content/reviews/img.jpg' data-fancybox="images"+i).rev__image-fancy
+                                                                                +image('images/content/reviews/img.jpg','rev__image-img')
+                                                                //- yt
+                                                                .rev__yt
+                                                                    iframe(src="https://www.youtube.com/embed/lhOWb_CZeZQ").rev__yt-iframe
+                                                            .rev__bottom
+                                                                button(type='button').rev__more
+                                                                    span.rev__more-open Развернуть
+                                                                    span.rev__more-close Свернуть
+                            //- recom
+                            .product__section
+                                +precom('С этип товаром покупают')
+
+
+
+
+
+
+
+

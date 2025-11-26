@@ -1,0 +1,46 @@
+extends ../main
+
+block variables
+    - var title = 'Проекты'
+    - var main = false
+
+block content
+    .catalog.news
+        .container
+            .row
+                //- left
+                aside.catalog__left.left
+                    //- menu
+                    .catalog__menu
+                        +amenu2()
+
+                //- right
+                main.catalog__right.right
+                    //- bread
+                    .catalog__bread.bread.right__bread
+                        a(href='/').bread__link
+                            +icon('home','bread__link-svg')
+                        span.bread__link.active
+                            span.bread__link-txt Проекты
+                    //- title
+                    h1.catalog__title.right__title Проекты
+
+                    //- list
+                    .catalog__list.news__list
+                        .row
+                            each i in [1,2,3,4,5,6,7,8,9]
+                                .news__item
+                                    +nitem()
+                        button(type='button').news__more Показать еще
+                        .news__pag
+                            +pagination()
+
+
+
+
+                    //- bottom
+                    .catalog__bottom
+                        .content
+                            p Предоставляем спектр услуг по установке, монтажу, настройке электроники и сантехники. Занимаемся скупкой и экологичной утилизацией старой техники. А также предлагаем воспользоваться системой кредитования для того, чтобы вы смогли приобрести необходимый товар или услугу прямо сейчас. Выполняем работы в день заказа, делаем все быстро и качественно!
+
+

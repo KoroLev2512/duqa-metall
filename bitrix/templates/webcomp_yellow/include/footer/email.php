@@ -1,0 +1,2 @@
+<!--<a href="mailto:duqametall@yandex.ru"><b><span style="color: #ffffff;">duqametall@yandex.ru</span></b></a>-->
+<a href="mailto:duqametall@yandex.ru"><b><span style="color: #ffffff;">tdduqa@yandex.com<br/></span></b></a>

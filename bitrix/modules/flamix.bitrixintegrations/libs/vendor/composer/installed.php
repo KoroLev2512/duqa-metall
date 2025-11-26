@@ -1,0 +1,52 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => 'ed300cdf10f117812d9d9ed8b9660e61c2c0f150',
+        'name' => 'flamix/bitrixintegrations',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'flamix/b24-lead' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../flamix/b24-lead',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '051ce0b887c45f0fc53f81c42cea855c9d25ca8c',
+            'dev_requirement' => false,
+        ),
+        'flamix/bitrixintegrations' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => 'ed300cdf10f117812d9d9ed8b9660e61c2c0f150',
+            'dev_requirement' => false,
+        ),
+        'flamix/conversions' => array(
+            'pretty_version' => 'v1.0',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../flamix/conversions',
+            'aliases' => array(),
+            'reference' => '03330d8d26a14a08887445eb665309d7f6c4834c',
+            'dev_requirement' => false,
+        ),
+        'xsuchy09/utm-cookie' => array(
+            'pretty_version' => '2.0.5',
+            'version' => '2.0.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../xsuchy09/utm-cookie',
+            'aliases' => array(),
+            'reference' => '01820b0f0e226d1af44ebe283eb68efe33bd907a',
+            'dev_requirement' => false,
+        ),
+    ),
+);

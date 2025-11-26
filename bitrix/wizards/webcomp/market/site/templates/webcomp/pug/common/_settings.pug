@@ -1,0 +1,934 @@
+-
+    var menu = [
+        {
+            title: 'Каталог',
+            href: 'catalog.html',
+            arrow: true,
+            catalogMenu: true,
+            submenu: [
+                'Мобильные устройства',
+                'Компьютеры',
+                'Умный дом',
+                'Умные тренажеры',
+                'Наручные часы',
+                'Умная одежда',
+                'Игровые приставки',
+                'Бытовая техника'
+            ],
+        },
+        {
+            title: 'Услуги',
+            href: 'services.html',
+            arrow: true,
+            submenu2: true
+        },
+        {
+            title: 'Доставка',
+            href: 'delivery.html',
+        },
+        {
+            title: 'Оплата',
+            href: 'pay.html',
+        },
+        {
+            title: 'Компания',
+            href: 'about.html',
+        },
+        {
+            title: 'Контакты',
+            href: 'contacts.html',
+        },
+        {
+            title: 'Акции',
+            href: 'actions.html',
+        },
+    ];
+-
+    var footerMenu = [
+        {
+            title: {
+                title: 'О компании',
+                href: 'about.html'
+            },
+            list: [
+                {
+                    title: 'Новости',
+                    href: 'news.html'
+                },
+                {
+                    title: 'Каталог',
+                    href: 'catalog.html'
+                },
+                {
+                    title: 'Отзывы',
+                    href: 'reviews.html'
+                },
+                {
+                    title: 'Портфолио',
+                    href: 'portfolio.html'
+                },
+                {
+                    title: 'Доставка',
+                    href: 'delivery.html'
+                }
+            ]
+        },
+        {
+            title: {
+                title: 'Каталог',
+                href: 'catalog.html'
+            },
+            list: [
+                {
+                    title: 'Мобильные устройства',
+                    href: 'catalog.html'
+                },
+                {
+                    title: 'Компьютеры',
+                    href: 'catalog.html'
+                },
+                {
+                    title: 'Умный дом',
+                    href: 'catalog.html'
+                },
+                {
+                    title: 'Умные тренажеры',
+                    href: 'catalog.html'
+                },
+                {
+                    title: 'Наручные часы',
+                    href: 'catalog.html'
+                }
+            ]
+        },
+        {
+            title: {
+                title: 'Услуги компании',
+                href: 'services.html'
+            },
+            list: [
+                {
+                    title: 'Ремонт техники по гарантии',
+                    href: 'service.html'
+                },
+                {
+                    title: 'Настройка умного дома',
+                    href: 'service.html'
+                },
+                {
+                    title: 'Монтаж кондиционеров',
+                    href: 'service.html'
+                },
+                {
+                    title: 'Настройка электроники',
+                    href: 'service.html'
+                },
+                {
+                    title: 'Сборка мебели',
+                    href: 'service.html'
+                }
+            ]
+        },
+        {
+            title: {
+                title: 'Информация',
+                href: 'info.html'
+            },
+            socials: true,
+            list: [
+                {
+                    title: 'Акции',
+                    href: 'actions.html'
+                },
+                {
+                    title: 'Оплата',
+                    href: 'pay.html'
+                },
+                {
+                    title: 'Доставка',
+                    href: 'delivery.html'
+                }
+            ]
+        }
+    ];
+-
+    var footerSocials = [
+        [
+            {
+                svg: 'vk',
+                href: 'https://vk.com/'
+            },
+            {
+                svg: 'inst',
+                href: 'https://www.instagram.com/'
+            },
+            {
+                svg: 'fb',
+                href: 'https://ru-ru.facebook.com/'
+            },
+            {
+                svg: 'yt',
+                href: 'https://www.youtube.com/'
+            },
+
+        ],
+        [
+            {
+                svg: 'vk',
+                href: 'https://vk.com/'
+            },
+            {
+                svg: 'inst',
+                href: 'https://www.instagram.com/'
+            },
+            {
+                svg: 'fb',
+                href: 'https://ru-ru.facebook.com/'
+            },
+            {
+                svg: 'yt',
+                href: 'https://www.youtube.com/'
+            },
+
+        ],
+
+    ];
+-
+    var advantages = [
+        {
+            src: 'images/content/index/advantages/1.svg',
+            title: 'Быстрая доставка',
+            txt: 'Бережно доставляем товары по России за 24 часа'
+        },
+        {
+            src: 'images/content/index/advantages/2.svg',
+            title: 'Клиентский сервис',
+            txt: 'Отвечаем на вопросы покупателей в течение 10 минут'
+        },
+        {
+            src: 'images/content/index/advantages/3.svg',
+            title: 'Бонусы за покупки',
+            txt: 'Дарим подарки и скидки до 70% всем покупателям'
+        },
+        {
+            src: 'images/content/index/advantages/4.svg',
+            title: 'Гарантия качества',
+            txt: 'Соответствуем требованиям и стандартам качества'
+        },
+        {
+            src: 'images/content/index/advantages/5.svg',
+            title: 'Доступные цены',
+            txt: 'Работаем напрямую с ведущими производителями'
+        }
+    ];
+-
+    var iservices = [
+        {
+            title: 'Капитальный ремонт под ключ и установка перегородок под замок',
+            src: 'images/content/index/services/1.jpg'
+        },
+        {
+            title: 'Общестроительные работы',
+            src: 'images/content/index/services/2.jpg'
+        },
+        {
+            title: 'Установка дверей и окон',
+            src: 'images/content/index/services/3.jpg'
+        },
+        {
+            title: 'Сантехнические работы',
+            src: 'images/content/index/services/4.jpg'
+        },
+        {
+            title: 'Установка дверей и окон',
+            src: 'images/content/index/services/5.jpg'
+        },
+        {
+            title: 'Электромонтажные работы',
+            src: 'images/content/index/services/6.jpg'
+        }
+    ];
+-
+    var iprojects = [
+        {
+            src: 'images/content/index/projects/1.jpg',
+            title: 'Подготовка Tesla Centre к открытию в Москве ',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах.'
+        },
+        {
+            src: 'images/content/index/projects/2.jpg',
+            title: 'Апгрейд и покраска электровелосипеда Qoros FB-2',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах.'
+        },
+        {
+            src: 'images/content/index/projects/3.jpg',
+            title: 'Ремонт балкона в Марьино 165 серия',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах.'
+        },
+        {
+            src: 'images/content/index/projects/4.jpg',
+            title: 'Подготовка Tesla Centre к открытию в Москве ',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах.'
+        },
+        {
+            src: 'images/content/index/projects/5.jpg',
+            title: 'Подготовка Tesla Centre к открытию в Москве ',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах.'
+        },
+        {
+            src: 'images/content/index/projects/3.jpg',
+            title: 'Ремонт балкона в Марьино 165 серия',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах.'
+        },
+
+    ];
+-
+    var ipops = [
+        {
+            src: 'images/content/index/popular/1.jpg',
+            title: 'Ручная вырезка узоров на чехле для Iphone 11 PRO. ',
+            price: '59 990 руб.',
+            priceOld: '65 000 руб.',
+            priceCls: 'price_green'
+        },
+        {
+            src: 'images/content/index/popular/2.jpg',
+            title: 'Неоновый Апгрейд системного блока в стиле Cyberpunk',
+            price: 'ОТ 59 990 руб.',
+        },
+        {
+            src: 'images/content/index/popular/3.jpg',
+            title: 'Полная установка и настройка камер видеонаблюдения',
+            price: '59 990 руб.',
+            priceOld: '65 000 руб.',
+            priceCls: 'price_green'
+        },
+        {
+            src: 'images/content/index/popular/4.jpg',
+            title: 'Разработка рекламных баннеров для рюкзаков с экранами',
+            price: 'от 5 000 руб.',
+        },
+
+
+    ];
+-
+    var irecomItems = [
+        {
+            src: 'images/content/catalog/1.jpg',
+            sticks: true,
+            enabled: true,
+            price: '7 000 РУБ.',
+            priceOld: '65 000 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...',
+            inbasket: false
+        },
+        {
+            src: 'images/content/catalog/2.png',
+            sticks: true,
+            enabled: true,
+            price: '32 990 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...',
+            inbasket: true
+        },
+        {
+            src: 'images/content/catalog/1.jpg',
+            sticks: false,
+            enabled: true,
+            price: '7 000 РУБ.',
+            priceOld: '65 000 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...',
+            inbasket: false
+        },
+        {
+            src: 'images/content/catalog/2.png',
+            sticks: false,
+            enabled: true,
+            price: '7 000 РУБ.',
+            priceOld: '65 000 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT',
+            inbasket: false
+        },
+        {
+            src: 'images/content/catalog/1.jpg',
+            sticks: false,
+            enabled: true,
+            price: '7 000 РУБ.',
+            priceOld: '65 000 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...',
+            inbasket: false
+        },
+    ];
+-
+    var irecomItems2 = [
+        {
+            src: 'images/content/catalog/2.png',
+            sticks: true,
+            enabled: true,
+            price: '32 990 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...',
+            inbasket: true
+        },
+        {
+            src: 'images/content/catalog/1.jpg',
+            sticks: true,
+            enabled: true,
+            price: '7 000 РУБ.',
+            priceOld: '65 000 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...',
+            inbasket: false
+        },
+        {
+            src: 'images/content/catalog/2.png',
+            sticks: false,
+            enabled: true,
+            price: '7 000 РУБ.',
+            priceOld: '65 000 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT',
+            inbasket: false
+        },
+        {
+            src: 'images/content/catalog/1.jpg',
+            sticks: false,
+            enabled: true,
+            price: '7 000 РУБ.',
+            priceOld: '65 000 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...',
+            inbasket: false
+        },
+        {
+            src: 'images/content/catalog/1.jpg',
+            sticks: false,
+            enabled: true,
+            price: '7 000 РУБ.',
+            priceOld: '65 000 руб.',
+            title: 'Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...',
+            inbasket: false
+        },
+    ];
+-
+    var irecom = {
+        sws: [
+            {
+                title: 'Акция',
+                checked: true
+            },
+            {
+                title: 'Советуем'
+            },
+            {
+                title: 'Новинка'
+            },
+            {
+                title: 'Хит'
+            }
+        ],
+        tabs: [
+            {
+                list: irecomItems,
+            },
+            {
+                list: irecomItems2
+            },
+            {
+                list: irecomItems
+            },
+            {
+                list: irecomItems2
+            },
+
+        ]
+    };
+-
+    var icats = [
+        {
+            src: 'images/content/index/categories/1.jpg',
+            title: 'Бытовая техника',
+        },
+        {
+            src: 'images/content/index/categories/2.jpg',
+            title: 'Инструменты',
+        },
+        {
+            src: 'images/content/index/categories/3.jpg',
+            title: 'Промышленная техника',
+        },
+        {
+            src: 'images/content/index/categories/4.jpg',
+            title: 'Сантехника',
+        },
+        {
+            src: 'images/content/index/categories/5.jpg',
+            title: 'Инструменты',
+        },
+        {
+            src: 'images/content/index/categories/6.jpg',
+            title: 'Бытовая техника',
+        },
+        {
+            src: 'images/content/index/categories/7.jpg',
+            title: 'Теплоизоляция',
+        },
+        {
+            src: 'images/content/index/categories/8.jpg',
+            title: 'Электрика и освещение',
+        },
+
+    ];
+-
+    var iactions = [
+        {
+            src: 'images/content/index/actions/1.jpg',
+            date: '20.12.2019',
+            title: 'Акция на строительные смеси - 30%'
+        },
+        {
+            src: 'images/content/index/actions/2.jpg',
+            date: '20.12.2019',
+            title: 'Акция на строительные смеси - 30%'
+        },
+        {
+            src: 'images/content/index/actions/3.jpg',
+            date: '20.12.2019',
+            title: 'Акция на строительные смеси - 30%'
+        },
+        {
+            src: 'images/content/index/actions/4.jpg',
+            date: '20.12.2019',
+            title: 'Строиматериалы оптом'
+        },
+        {
+            src: 'images/content/index/actions/1.jpg',
+            date: '20.12.2019',
+            title: 'Акция на строительные смеси - 30%'
+        },
+        {
+            src: 'images/content/index/actions/2.jpg',
+            date: '20.12.2019',
+            title: 'Акция на строительные смеси - 30%'
+        },
+    ];
+-
+    var inews = [
+        {
+            src: 'images/content/index/news/1.jpg',
+            date: '20.12.2019',
+            title: 'Система виртуальной реальности HTC VIVE Pro Full Kit',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров...'
+        },
+        {
+            src: 'images/content/index/news/2.jpg',
+            date: '20.12.2019',
+            title: 'Появился концепт iPhone 12 Pro с четырьмя камерами',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров...'
+        },
+        {
+            src: 'images/content/index/news/3.jpg',
+            date: '20.12.2019',
+            title: 'Обзор ASUS ZenBook 15 UX534FTС',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров...'
+        },
+        {
+            src: 'images/content/index/news/4.jpg',
+            date: '20.12.2019',
+            title: 'Система виртуальной реальности HTC VIVE Pro Full Kit',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров...'
+        }
+    ];
+-
+    var irevs = [
+        {
+            src: 'images/content/index/reviews/1.jpg',
+            title: 'Александр Баженов',
+            prof: 'Генеральный директор ООО “Техно - Дом”'
+        },
+        {
+            src: 'images/content/index/reviews/2.jpg',
+            title: 'Анна Гаврилова',
+            prof: 'Генеральный директор ООО “Техно - Дом”'
+        },
+        {
+            src: 'images/content/index/reviews/3.jpg',
+            title: 'Ирина Молотова',
+            prof: 'Дизайнер интерьера'
+        },
+        {
+            src: 'images/content/index/reviews/1.jpg',
+            title: 'Александр Баженов',
+            prof: 'Генеральный директор ООО “Техно - Дом”'
+        }
+    ];
+-
+    var rating = [
+        {
+            id: 5,
+            rate: 'Отлично'
+        },
+        {
+            id: 4,
+            rate: 'Хорошо'
+        },
+        {
+            id: 3,
+            rate: 'Нормально'
+        },
+        {
+            id: 2,
+            rate: 'Плохо'
+        },
+        {
+            id: 1,
+            rate: 'Очень плохо'
+        }
+    ];
+-
+    var asideMenu = [
+        {
+            title: 'Стройматериалы'
+        },
+        {
+            title: 'Бытовая техника'
+        },
+        {
+            title: 'Инуструменты'
+        },
+        {
+            title: 'Промышленная техника'
+        },
+        {
+            title: 'Инуструменты'
+        },
+        {
+            title: 'Сантехника'
+        },
+        {
+            title: 'Электрика и освещение'
+        },
+        {
+            title: 'Теплоизоляция'
+        }
+    ];
+-
+    var asideMenu2 = [
+        'Шуруповерты',
+        'Перфораторы',
+        'Наборы отверток',
+        'Наборы ключей',
+        'Сантехника',
+    ];
+-
+    var asideMenu3 = [
+        {
+            title: 'О компании',
+            href: 'about.html'
+        },
+        {
+            title: 'Новости',
+            href: 'news.html'
+        },
+        {
+            title: 'Статьи',
+            href: 'articles.html'
+        },
+        {
+            title: 'Отзывы',
+            href: 'reviews.html'
+        },
+        {
+            title: 'Доставка',
+            href: 'delivery.html'
+        },
+        {
+            title: 'Оплата',
+            href: 'delivery.html'
+        },
+        {
+            title: 'Проекты',
+            href: 'projects.html',
+            cls: 'active'
+        },
+        {
+            title: 'Лицензия',
+            href: '/'
+        },
+        {
+            title: 'Документы',
+            href: '/'
+        },
+        {
+            title: 'Контакты',
+            href: 'contacts.html'
+        },
+
+    ];
+-
+    var asideMenu4 = [
+        {
+            title: 'Текущие заказы',
+            href: 'lk-orders.html',
+            cls: 'active'
+        },
+        {
+            title: 'Личный счет',
+            href: 'lk-account.html'
+        },
+        {
+            title: 'Личные данные',
+            href: 'lk-data.html'
+        },
+        {
+            title: 'Сменить пароль',
+            href: 'lk-pass.html'
+        },
+        {
+            title: 'История заказов',
+            href: 'lk-history.html'
+        },
+        {
+            title: 'Корзина',
+            href: 'lk-basket.html'
+        },
+        {
+            title: 'Подписки',
+            href: 'lk-subscribe.html'
+        },
+        {
+            title: 'Контакты',
+            href: 'lk-contacts.html'
+        },
+
+    ];
+-
+    var catalogCats = [
+        {
+            title: 'Бытовая техника',
+            src: 'images/content/index/categories/1.jpg'
+        },
+        {
+            title: 'Инструменты',
+            src: 'images/content/index/categories/2.jpg'
+        },
+        {
+            title: 'Промышленная техника',
+            src: 'images/content/index/categories/3.jpg'
+        },
+        {
+            title: 'Инструменты',
+            src: 'images/content/index/categories/4.jpg'
+        },
+        {
+            title: 'Бытовая техника',
+            src: 'images/content/index/categories/5.jpg'
+        },
+        {
+            title: 'Теплоизоляция',
+            src: 'images/content/index/categories/6.jpg'
+        },
+        {
+            title: 'Сантехника',
+            src: 'images/content/index/categories/7.jpg'
+        },
+        {
+            title: 'Электрика и освещение',
+            src: 'images/content/index/categories/8.jpg'
+        }
+    ];
+-
+    var catalogCategories = [
+        {
+            title: 'Шуруповерты',
+            src: 'images/content/catalog/categories/1.jpg',
+            sub: 'товаров: 20',
+            cls: 'active'
+        },
+        {
+            title: 'Сантехника',
+            src: 'images/content/catalog/categories/2.jpg',
+            sub: 'Товаров: 25'
+        },
+        {
+            title: 'Сантехника',
+            src: 'images/content/catalog/categories/3.jpg',
+            sub: 'Товаров: 25'
+        },
+        {
+            title: 'Сантехника',
+            src: 'images/content/catalog/categories/4.jpg',
+            sub: 'Товаров: 25'
+        },
+        {
+            title: 'Сантехника',
+            src: 'images/content/catalog/categories/5.jpg',
+            sub: 'Товаров: 25'
+        },
+        {
+            title: 'Сантехника',
+            src: 'images/content/catalog/categories/6.jpg',
+            sub: 'Товаров: 25'
+        }
+    ];
+-
+    var catalogSort = [
+        {
+            title: 'По популярности (убывание)',
+            cls: 'active'
+        },
+        {
+            title: 'По популярности (возрастание)'
+        },
+        {
+            title: 'По алфавиту (убывание)'
+        },
+        {
+            title: 'По алфавиту (возрастание)'
+        },
+        {
+            title: 'По цене (убывание)'
+        },
+        {
+            title: 'По цене (возрастание)'
+        },
+
+    ];
+-
+    var deliveryOptions = [
+        {
+            title: 'Самовывоз',
+            src: 'images/content/basket/delivery1.svg',
+            price: '0 руб.'
+        },
+        {
+            title: 'Доставка в пределах МКАД',
+            src: 'images/content/basket/delivery2.svg',
+            checked: true,
+            price: 'от 500 руб.'
+        },
+        {
+            title: 'Доставка за МКАД',
+            src: 'images/content/basket/delivery3.svg',
+            price: 'от 800 руб.'
+        },
+
+    ];
+-
+    var payOptions = [
+        {
+            title: 'Банковская карта',
+            src: 'images/content/basket/pay1.svg',
+            checked: true
+        },
+        {
+            title: 'Наличный расчет',
+            src: 'images/content/basket/pay2.svg',
+        },
+
+    ];
+-
+    var productChars = [
+        ['Категория товара','Шуруповёрты'],
+        ['Цвет','Черный'],
+        ['Резьба ','Зубр'],
+        ['Модель рукоятки','Нет'],
+        ['Ширина патрона ','57 мм'],
+        ['Возможность перезарядки','Есть'],
+        ['Возможность замены аккумулятора ','Есть'],
+        ['USB','ДА'],
+        ['Подерживаемые устройства','Bosh, Kolner']
+    ];
+-
+    var productDocs = [
+        {
+            src: 'images/icons/pdf.svg',
+            title: 'Полная документация товара по эксплуатации в формате PDF'
+        },
+        {
+            src: 'images/icons/doc.svg',
+            title: 'Инструкция к применению в формате Microsoft Word'
+        },
+        {
+            src: 'images/icons/xlsx.svg',
+            title: 'Прайс - Лист на другие разновидности товара'
+        }
+    ];
+-
+    var nservices = [
+        {
+            src: 'images/content/new/1.jpg',
+            title: 'Капитальный ремонт под ключ',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров...'
+        },
+        {
+            src: 'images/content/new/2.jpg',
+            title: 'Правила безопасной и эффективной работы с электроточилом',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров...'
+        },
+        {
+            src: 'images/content/new/3.jpg',
+            title: 'Правила безопасной и эффективной работы с электроточилом',
+            txt: 'Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров...'
+        }
+    ];
+-
+    var cabinetList = [
+        {
+            href: 'lk-orders.html',
+            title: 'Текущие заказы',
+            icon: 'lk-orders'
+        },
+        {
+            href: 'lk-account.html',
+            title: 'Личный счет',
+            icon: 'lk-account'
+        },
+        {
+            href: 'lk-data.html',
+            title: 'Личные данные',
+            icon: 'lk-data'
+        },
+        {
+            href: 'lk-history.html',
+            title: 'История заказов',
+            icon: 'lk-history'
+        },
+        {
+            href: 'lk-profile.html',
+            title: 'Профили заказов',
+            icon: 'lk-profile'
+        },
+        {
+            href: 'lk-basket.html',
+            title: 'Корзина',
+            icon: 'lk-basket'
+        },
+        {
+            href: 'lk-subscribe.html',
+            title: 'Подписки',
+            icon: 'lk-subscribe'
+        },
+        {
+            href: 'lk-contacts.html',
+            title: 'Контакты',
+            icon: 'lk-contacts'
+        },
+        {
+            href: 'lk-favorite.html',
+            title: 'Избранное',
+            icon: 'lk-favorite'
+        },
+
+    ];
+-
+    var payMethods = [
+        {
+            name: 'Яндекс Деньги',
+            icon: 'ya'
+        },
+        {
+            name: 'Тинькофф',
+            icon: 'tinkoff'
+        },
+        {
+            name: 'Сбербанк',
+            icon: 'sber'
+        },
+
+    ];

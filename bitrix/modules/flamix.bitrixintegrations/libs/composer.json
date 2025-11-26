@@ -1,0 +1,13 @@
+{
+    "name": "flamix/bitrixintegrations",
+    "require": {
+        "php": "^7.4",
+        "flamix/b24-lead": "dev-master"
+    },
+    "authors": [
+    {
+      "name": "Flamix",
+      "email": "sales@flamix.email"
+    }
+  ]
+}

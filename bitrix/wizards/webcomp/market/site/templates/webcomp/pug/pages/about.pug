@@ -1,0 +1,100 @@
+extends ../main
+
+block variables
+    - var title = 'О компании'
+    - var main = false
+
+block content
+    .catalog.service
+        .container
+            .row
+                //- left
+                aside.catalog__left.left
+                    //- menu
+                    .catalog__menu
+                        +amenu2()
+
+                    //- consult
+                    .catalog__consult
+                        .catalog__consult-top
+                            .catalog__consult-image
+                                +image('images/content/catalog/img.svg','catalog__consult-img')
+                            .catalog__consult-title Нужна консультация?
+                            .catalog__consult-txt Наши специалисты ответят на любой интересующий вопрос
+                        button(type='button').catalog__consult-btn.jsQuestion ЗАДАТЬ ВОПРОС
+
+
+
+
+                    //- banner
+                    a(href='category.html').catalog__banner
+                        span.catalog__banner-image
+                            +image('images/content/catalog/img2.jpg','catalog__banner-img')
+                        span.catalog__banner-title Строиматериалы оптом
+
+
+
+
+                //- right
+                main.catalog__right.right
+                    //- bread
+                    .catalog__bread.bread.right__bread
+                        a(href='/').bread__link
+                            +icon('home','bread__link-svg')
+                        span.bread__link.active
+                            span.bread__link-txt О компании
+                    //- title
+                    h1.about__title Интернет магазин “Стройшоп”
+
+                    //- row
+                    .row.about__row
+                        //- left
+                        .about__left
+                            +image('images/content/about/img.png','about__img')
+
+                        //- right
+                        .about__right
+                            .content
+                                p WebComp: Стройшоп — интернет-магазин строительных инструментов и материалов для себя, дома, офиса и дачи. Здесь вы найдете товары под свои предпочтения: от аудиотехники и одежды до строительных материалов и велосипедов.
+                                p Работаем с 2005 года, поэтому на личном опыте выявили надежных партнеров. Сотрудничаем с проверенными производителями, чьи товары соответствуют гостам. А также — со службами доставки, которые привозят заказы в срок.
+
+
+
+
+                    //- list
+                    .about__advantages
+                        .aadvantages
+                            .row
+                                each i in [1,2,3]
+                                    .aadvantage
+                                        .aadvantage__left
+                                            +image('images/content/index/advantages/1.svg','aadvantage__img')
+                                        .aadvantage__right
+                                            .aadvantage__title Быстрая доставка
+                                            .aadvantage__txt Бережно доставляем товары по России за 24 часа
+
+
+                    //- content
+                    .about__content
+                        .content
+                            h3 Клиентский сервис на высоте!
+                            p Наши менеджеры — помощники и консультанты. Помогут подобрать размер футболки, модель ноутбука и шкаф в гостиную. А также подскажут, как оформить заказ и совершить оплату. Менеджеры отвечают на вопросы в онлайн-чате и через формы обратной связи. Среднее время ответа — 10 минут.
+                            blockquote Учитываем историю покупок и общения, чтобы персонализировать ответы и предложения. Нам важно решить вопрос быстро и качественно. Формирование долгосрочных отношений — одна из главных целей. Понимаем, что проще покупать товары в магазине, где предпочтения уже знают и помогают с выбором.
+                            h3 Комплексный подход к товарам и услугам
+                            p Покупка товара проста только на первый взгляд. Нужно думать о том, как оформить доставку, кто поднимет на 8 этаж шкаф и установит кондиционер в спальню. В нашем магазине эти процессы уже созданы. Думайте только о подборе товаров в каталоге. Для этого предлагаем комплексный подход — наша команда выполнит все задачи!
+                            ul
+                                li Доставка товаров до квартиры в течение 24 часов.
+                                li Менеджер, который знает детали заказов.
+                                li Услуги по монтажу, установке, подключению и другие.
+                            p Сделаем жизнь ярче, уютнее и комфортнее. В нашем интернет-магазине найдется товар, который нужен именно вам. Если возникнут вопросы, пишите в онлайн-чат. С удовольствием поможем с выбором и подскажем детали заказа.
+                    //- banner
+                    .service__banner
+                        .sbanner
+                            .sbanner__left
+                                .sbanner__img
+                                    +image('images/content/service/icon.svg','sbanner__img-img')
+                                .sbanner__txt Оформите заявку на сайте, мы свяжемся с вами в ближайшее время и ответим на все интересующие вопросы.
+                            .sbanner__right
+                                .sbanner__oldprice 1 200 р./м.2
+                                .sbanner__price 1 000 р./м.2
+                                button(type='button').btn.sbanner__btn.jsCall ЗАКАЗАТЬ УСЛУГУ
