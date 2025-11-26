@@ -1,1 +1,0 @@
-<?define("artamonov_bitrix24_TEMPORARY_CACHE", "IWwFDXphBVNhBnAxVzJWcQ11");?>

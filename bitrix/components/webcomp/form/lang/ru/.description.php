@@ -1,5 +1,0 @@
-<?
-$MESS ['WC_ELEMENT_GETLIST_NAME'] = "Формы";
-$MESS ['WC_ELEMENT_GETLIST_DESC'] = "Формы";
-$MESS ['WC_ELEMENT_GETLIST_PATH_NAME'] = "Контент";
-?>
