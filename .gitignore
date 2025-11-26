@@ -1,3 +1,4 @@
+# === Основные Bitrix каталоги, которые нельзя коммитить ===
 /upload/
 /bitrix/cache/
 /bitrix/managed_cache/
@@ -6,15 +7,60 @@
 /bitrix/updates/
 /bitrix/tmp/
 /bitrix/backup/
-/bitrix/php_interface/dbconn.php
-/bitrix/php_interface/dbconn.ini
+/bitrix/restore/
+/bitrix/backup_db/
+/bitrix/backup_mysql/
+/bitrix/webdav/
+/bitrix/modules/*/install/
+/bitrix/modules/*/tools/
 
+# Конфиги (секретные)
+!/bitrix/php_interface/
+ /bitrix/php_interface/dbconn.php
+ /bitrix/php_interface/dbconn.ini
+ /bitrix/php_interface/dbconn*.php
+ /bitrix/php_interface/smtp_password.php
+
+# === Логи и статистика ===
 /logs/
 /awstats/
-/backup/
-
-sitemap*.xml
+/traffic/
+//statistic/
+/bitrix/statistics/
+/bitrix/bx_statistic.log
+/bitrix/error.log
 *.log
+
+# === Временные данные ===
+/backup/
+*.bak
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# === Sitemap и большие файлы ===
+sitemap*.xml
 *.zip
 *.gz
-*.bak
+*.tar
+*.7z
+*.sql
+
+# === IDE ===
+/.idea/
+/.vscode/
+/*.iml
+
+# === Системные файлы ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Node, composer (если есть frontend) ===
+node_modules/
+/vendor/
+
+# === Исключаем enormous Bitrix artifacts ===
+/bitrix/license_key.php
+/bitrix/license_key_backup.php
